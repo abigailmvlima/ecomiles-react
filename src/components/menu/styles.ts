@@ -3,12 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   background-color: #0876a6;
-  position: absolute;
   width: 487px;
   height: 66px;
   border-radius: 0 0 20px 20px;
-  right: 3%;
-  top: 0;
 `;
 
 export const Home = styled.div`

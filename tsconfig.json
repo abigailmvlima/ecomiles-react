@@ -25,6 +25,7 @@
       "components/*": ["components/*"],
       "assets/*": ["assets/*"],
       "themes/*": ["themes/*"],
+      "domains/*": ["domains/*"],
     },
   },
   "include": [

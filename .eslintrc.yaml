@@ -20,6 +20,8 @@ rules:
   "react/react-in-jsx-scope": "off"  # Desativa a regra
   "indent": ["error", 2]  # Erro se a indentação não for de 2 espaços
   "semi": ["warn", "always"]  # Aviso se o ponto e vírgula estiver faltando
+  "@typescript-eslint/no-unused-vars": "off" #
+
   
 
 # Configurações adicionais

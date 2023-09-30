@@ -4,7 +4,7 @@ import * as S from "./styles";
 const Logo = () => {
   return (
     <S.Container>
-      <svg.Heart color="#ffff"  />
+      <svg.Heart  />
     </S.Container>
   );
 };
