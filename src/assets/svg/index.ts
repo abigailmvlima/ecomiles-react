@@ -1,7 +1,5 @@
-import Heart from "./heart.svg";
+import { ReactComponent as Heart} from "./heart.svg";
 
-export const svg = {
+export default {
   Heart,
 };
-
-export default svg;
