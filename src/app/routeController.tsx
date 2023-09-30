@@ -1,8 +1,8 @@
+import ViewCadPacient from "../views/viewCadPacient";
+import ViewHome from "../views/viewHome";
+import ViewListPacient from "../views/viewListPacient";
+import ViewNotFound from "../views/viewNotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ViewHome from "../view/viewHome";
-import ViewListPacient from "../view/viewListPacient";
-import ViewCadPacient from "../view/viewCadPacient";
-import ViewNotFound from "../view/viewNotFound";
 
 const RouteController = () => {
   return (

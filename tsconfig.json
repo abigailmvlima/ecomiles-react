@@ -1,4 +1,5 @@
 {
+   "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
   "compilerOptions": {
     "target": "es5",
     "lib": [
@@ -19,12 +20,60 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+
+    "baseUrl": "./src",
     "paths": {
-      "@component/*": ["./src/component/*"],
-      "@app/*": ["./src/app/*"],
-    }
+      "@components/*": [
+        "components/*"
+      ],
+      "@views/*": [
+        "views/*"
+      ],
+      "@svg/*": [
+        "assets/svg/*"
+      ],
+      "@domain/*": [
+        "domain/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+
+      "@assets/*": [
+        "assets/*"
+      ],
+ 
+      "@config/*": [
+        "config/*"
+      ],
+      "@store/*": [
+        "store/*"
+      ],
+      "@app/*": [
+        "app/*"
+      ],
+      "@context/*": [
+        "context/*"
+      ],
+      "@show/*": [
+        "show/*"
+      ],
+      "@api/*": [
+        "api/*"
+      ],
+      "@themes/*": [
+        "themes/*"
+      ],
+      "@actions/*": [
+        "actions/*"
+      ],
+    },
   },
   "include": [
     "src"
-  ]
+  ],
+  
 }
