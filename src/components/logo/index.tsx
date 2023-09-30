@@ -1,7 +1,9 @@
 import * as S from "./styles";
-
+// import {Heart} from '../../assets/svg'
 const Logo = () => {
-  return <S.Container>Tes6666tesss</S.Container>;
+  return <S.Container>
+    {/* <Heart /> */}
+  </S.Container>;
 };
 
 export default Logo;
