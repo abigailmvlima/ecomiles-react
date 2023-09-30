@@ -1,5 +1,8 @@
 
 import Logo from "components/logo";
+import Menu from "components/menu";
+import Button from "components/button";
+// import MediasSociais from "../../components/mediasSociais";
 import * as S from "./styles";
 
 const ViewHome = () => {
@@ -7,6 +10,9 @@ const ViewHome = () => {
     <S.Container>
       testes
       <Logo />
+      <Menu />
+      <Button />
+      {/* <MediasSociais /> */}
     </S.Container>
   );
 };
