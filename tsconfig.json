@@ -1,14 +1,10 @@
 {
-   "lint": "eslint --ext,.ts,.tsx .",
+  "lint": "eslint --ext,.ts,.tsx .",
   "compilerOptions": {
     "jsx": "react-jsx",
     "esModuleInterop": true,
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
@@ -19,17 +15,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "removeComments": true,
     "noEmit": true,
     "baseUrl": "./src",
     "paths": {
       "components/*": ["components/*"],
       "assets/*": ["assets/*"],
       "themes/*": ["themes/*"],
-      "domains/*": ["domains/*"],
-    },
+      "domains/*": ["domains/*"]
+    }
   },
-  "include": [
-    "src"
-  ],
-  
+  "include": ["src"]
 }

@@ -1,7 +1,5 @@
-import svg from 'assets/svg';
-import * as S from './styles';
-import { EImages } from 'domains/enums/EImages';
 import { MouseEventHandler } from 'react';
+import * as S from './styles';
 
 type TProps = {
   title: string;

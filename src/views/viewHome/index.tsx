@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 
+import ButtonShortCut from 'components/buttonShortCut';
 import Logo from 'components/logo';
 import Menu from 'components/menu';
-import ButtonShortCut from 'components/buttonShortCut';
-import { EImages } from 'domains/enums/EImages';
 import SocialMedia from 'components/socialMedia';
+import { EImages } from 'domains/enums/EImages';
 
-import * as S from './styles';
 import { EActiveView } from 'domains/enums/EActiveView';
+import * as S from './styles';
 
 const ViewHome = () => {
   const navigate = useNavigate();

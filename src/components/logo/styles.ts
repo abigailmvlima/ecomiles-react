@@ -1,6 +1,6 @@
-import svg from "assets/svg";
-import styled from "styled-components";
-import themes from "themes/index";
+import svg from 'assets/svg';
+import styled from 'styled-components';
+import themes from 'themes/index';
 
 export const Container = styled.div`
   display: flex;

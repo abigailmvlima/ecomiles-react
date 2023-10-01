@@ -1,4 +1,4 @@
 export enum EImages {
-  list = "Health",
-  plus = "Plus",
+  list = 'Health',
+  plus = 'Plus',
 }

@@ -1,15 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 
-import Logo from 'components/logo';
 import Menu from 'components/menu';
-import ButtonShortCut from 'components/buttonShortCut';
-import { EImages } from 'domains/enums/EImages';
-import SocialMedia from 'components/socialMedia';
 
-import * as S from './styles';
-import { EActiveView } from 'domains/enums/EActiveView';
 import ButtonGo from 'components/buttonGo';
+import InputDefault from 'components/inputDefault';
 import ListPacient from 'components/listPacient';
+import { EActiveView } from 'domains/enums/EActiveView';
+import * as S from './styles';
 
 const ViewListPacient = () => {
   const navigate = useNavigate();
@@ -27,8 +24,12 @@ const ViewListPacient = () => {
       <S.Body>
         <S.Search>
           <S.InputBase>
-            <S.Input>inputeste</S.Input>
-            <ButtonGo title={'Buscar'} onClick={() => {}} />
+            <S.Input>
+              <InputDefault label={'Filtro'} />
+            </S.Input>
+            <S.InputButton>
+              <ButtonGo title={'Buscar'} onClick={() => {}} />
+            </S.InputButton>
           </S.InputBase>
           <ButtonGo title={'NOVO'} onClick={() => {}} />
         </S.Search>
@@ -36,27 +37,77 @@ const ViewListPacient = () => {
           <ListPacient
             data={[
               {
-                nome: 'Usuario 01',
-                phone: '(11)9-9999-9999',
-                mail: 'emaildousuario@dominio.com',
-                dateBirth: '10/11/2012',
-                city: 'Cidade do Usuario',
+                id: {
+                  value: 1,
+                },
+
+                name: {
+                  title: 'Usuario 01',
+                },
+                phone: {
+                  title: '(11)9-9999-9999',
+                },
+                mail: {
+                  title: 'emaildousuario@dominio.com',
+                },
+                dateBirth: {
+                  title: '10/11/2012',
+                },
+                city: {
+                  title: 'Cidade do Usuario',
+                },
+                actions: {
+                  title: '',
+                },
               },
 
               {
-                nome: 'Usuario 02',
-                phone: '(11)9-9999-9999',
-                mail: 'emaildousuario@dominio.com',
-                dateBirth: '10/11/2012',
-                city: 'Cidade do Usuario',
+                id: {
+                  value: 2,
+                },
+
+                name: {
+                  title: 'Usuario 02',
+                },
+                phone: {
+                  title: '(11)9-9999-9999',
+                },
+                mail: {
+                  title: 'emaildousuario@dominio.com',
+                },
+                dateBirth: {
+                  title: '10/11/2012',
+                },
+                city: {
+                  title: 'Cidade do Usuario',
+                },
+                actions: {
+                  title: '',
+                },
               },
 
               {
-                nome: 'Usuario 03',
-                phone: '(11)9-9999-9999',
-                mail: 'emaildousuario@dominio.com',
-                dateBirth: '10/11/2012',
-                city: 'Cidade do Usuario',
+                id: {
+                  value: 3,
+                },
+                name: {
+                  title: 'Usuario 03',
+                },
+                phone: {
+                  title: '(11)9-9999-9999',
+                },
+                mail: {
+                  title: 'emaildousuario@dominio.com',
+                },
+                dateBirth: {
+                  title: '10/11/2012',
+                },
+                city: {
+                  title: 'Cidade do Usuario',
+                },
+                actions: {
+                  title: '',
+                },
               },
             ]}
           />

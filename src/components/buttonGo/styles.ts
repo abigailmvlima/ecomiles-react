@@ -7,7 +7,7 @@ export const Container = styled.div`
   background-color: ${themes.colors.v3};
   border: 2px solid rgba(6, 106, 149, 0.55);
   border-radius: 15px;
-  height: 55px;
+  height: 47px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
@@ -32,4 +32,5 @@ export const Titulo = styled.div`
   margin: 0 15px;
   flex-wrap: wrap;
   line-height: 35px;
+  padding: 0 30px;
 `;

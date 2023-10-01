@@ -1,8 +1,8 @@
-import RouteController from './routeController';
-import 'fontsource-lato';
 import 'fontsource-inter';
+import 'fontsource-lato';
 import 'fontsource-roboto';
 import './index.css';
+import RouteController from './routeController';
 
 import * as S from './styles';
 
