@@ -1,10 +1,15 @@
 import svg from "assets/svg";
 import * as S from "./styles";
-// import {Heart} from '../../assets/svg'
+
 const Logo = () => {
   return (
     <S.Container>
-      <svg.Heart  />
+      <S.Icon>
+        <svg.Heart  />
+      </S.Icon>
+      <S.Title>
+        Doctor<br />Health
+      </S.Title>
     </S.Container>
   );
 };

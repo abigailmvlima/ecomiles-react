@@ -1,29 +1,41 @@
-import styled from "styled-components";
+import styled, { css } from 'styled-components';
+import themes from 'themes/index';
+
+const cssActive = css`
+  font-weight: 900;
+  font-size: 23px;
+  font-family: ${themes.fontFamily.lato};
+  letter-spacing: 2.76px;
+`;
+
+const cssDesactive = css`
+  font-weight: 100;
+  letter-spacing: 2.76px;
+  font-family: ${themes.fontFamily.lato};
+  font-size: 23px;
+  color: #b0cccf;
+`;
 
 export const Container = styled.div`
   display: flex;
   background-color: #0876a6;
   width: 487px;
-  height: 66px;
+  height: 76px;
   border-radius: 0 0 20px 20px;
+  justify-content: space-between;
 `;
 
-export const Home = styled.div`
-  display: flex;
-  color: #ffffff;
-  font-size: 23px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  letter-spacing: 2.76px;
-  padding: 16px 63px;
-`;
+interface IButton {
+  active: boolean;
+}
 
-export const Paciente = styled.div`
+export const Button = styled.div<IButton>`
   display: flex;
+  width: 50%;
   color: #ffffff;
-  font-size: 23px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 300;
-  letter-spacing: 2.76px;
-  padding: 16px 63px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 14px;
+  ${(p: IButton) => (p.active == true ? cssActive : cssDesactive)};
 `;

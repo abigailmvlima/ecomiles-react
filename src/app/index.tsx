@@ -1,8 +1,10 @@
-import RouteController from "./routeController";
-import "fontsource-lato";
-import "fontsource-inter";
-import "fontsource-roboto";
-import * as S from "./styles";
+import RouteController from './routeController';
+import 'fontsource-lato';
+import 'fontsource-inter';
+import 'fontsource-roboto';
+import './index.css';
+
+import * as S from './styles';
 
 const App = () => {
   return (
