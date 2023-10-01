@@ -6,6 +6,14 @@ const cssActive = css`
   font-size: 23px;
   font-family: ${themes.fontFamily.lato};
   letter-spacing: 2.76px;
+
+  &:hover {
+    color: #2fc5fb;
+  }
+
+  &:active {
+    color: #657a7c;
+  }
 `;
 
 const cssDesactive = css`
@@ -14,6 +22,14 @@ const cssDesactive = css`
   font-family: ${themes.fontFamily.lato};
   font-size: 23px;
   color: #b0cccf;
+
+  &:hover {
+    color: #2fc5fb;
+  }
+
+  &:active {
+    color: #657a7c;
+  }
 `;
 
 export const Container = styled.div`
@@ -37,5 +53,7 @@ export const Button = styled.div<IButton>`
   justify-content: center;
   align-items: center;
   margin-bottom: 14px;
+  cursor: pointer;
+
   ${(p: IButton) => (p.active == true ? cssActive : cssDesactive)};
 `;
