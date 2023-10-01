@@ -6,7 +6,12 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
-  font-size: 190px;
+  font-size: 12px;
+`;
+
+export const Content = styled.div`
+  margin: 15px 5%;
+  flex-direction: column;
 `;
 
 export const Header = styled.div`
@@ -58,7 +63,7 @@ export const Footer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0 5%;
+  margin: 15px 5%;
 `;
 
 export const FooterContent = styled.div`
@@ -86,3 +91,33 @@ export const Input = styled.div`
   font-size: 15px;
   margin-right: 10px;
 `;
+
+export const SubTitle = styled.div`
+  font-size: 20px;
+`;
+export const Form = styled.div`
+  flex-wrap: wrap;
+`;
+export const Name = styled.div`
+  width: 70%;
+`;
+export const Sexy = styled.div`
+  width: 30%;
+`;
+export const CPF = styled.div`
+  width: 30%;
+`;
+export const Naturalidade = styled.div`
+  width: 50%;
+`;
+export const DtNascimento = styled.div``;
+export const StateCivil = styled.div``;
+export const Phone = styled.div``;
+export const Mail = styled.div``;
+
+export const CEP = styled.div``;
+export const Endereco = styled.div``;
+export const Numero = styled.div``;
+export const Complemento = styled.div``;
+export const Bairro = styled.div``;
+export const Cidade = styled.div``;
