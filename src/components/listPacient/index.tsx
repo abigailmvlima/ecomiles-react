@@ -1,4 +1,8 @@
-import { TListPacient, TTitles } from 'domains/types/TListPacient';
+import {
+  EPacientTitles,
+  TListPacient,
+  TTitles,
+} from 'domains/types/TListPacient';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as S from './styles';
@@ -13,23 +17,38 @@ const ListPacient = ({ data }: TProps) => {
 
   useEffect(() => {
     const temp: TTitles[] = [
-      { name: 'name', label: 'nome', css: S.ColName, ccsTitle: S.ccsTitle },
       {
-        name: 'phone',
+        name: EPacientTitles.name,
+        label: 'nome',
+        css: S.ColName,
+        ccsTitle: S.ccsTitle,
+      },
+      {
+        name: EPacientTitles.phone,
         label: 'celular',
         css: S.ColPhone,
         ccsTitle: S.ccsTitle,
       },
-      { name: 'mail', label: 'e-mail', css: S.ColMail, ccsTitle: S.ccsTitle },
       {
-        name: 'dateBirth',
+        name: EPacientTitles.mail,
+        label: 'e-mail',
+        css: S.ColMail,
+        ccsTitle: S.ccsTitle,
+      },
+      {
+        name: EPacientTitles.dateBirth,
         label: 'Dt.Nascimento',
         css: S.ColDateBirth,
         ccsTitle: S.ccsTitle,
       },
-      { name: 'city', label: 'Cidade', css: S.ColCity, ccsTitle: S.ccsTitle },
       {
-        name: 'actions',
+        name: EPacientTitles.city,
+        label: 'Cidade',
+        css: S.ColCity,
+        ccsTitle: S.ccsTitle,
+      },
+      {
+        name: EPacientTitles.actions,
         label: 'Editar',
         icon: S.IconEdit,
         css: S.ColActions,

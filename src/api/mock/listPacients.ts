@@ -1,60 +1,63 @@
-export default [
+import { TFHIRPacient } from 'domains/types/TFHIR';
+
+const list: TFHIRPacient[] = [
   {
     id: 1,
     name: 'Antonio Oliveira',
     sex: 'Masculino',
-    cpf: '00000000000',
+    document: '00000000000',
     naturalness: 'Brasileiro',
     maritalstatus: 'casado',
-    dateofbirth: '00/00/00',
+    dateOfbirth: '00/00/00',
     phone: '(00) 0 00000000',
-    email: 'usuario@dominio.com.br',
+    mail: 'usuario@dominio.com.br',
     address: {
-      Postcode: '03541000',
+      postcode: '03541000',
       address: 'endereco do usuario',
       number: '000',
       complement: 'informacao complementar',
       neighborhood: 'bairro',
-      city:'cidade',
+      city: 'cidade',
     },
   },
-{
+  {
     id: 2,
-    name: 'Antonio Oliveira',
+    name: 'Joao de Oliveira',
     sex: 'Masculino',
-    cpf: '00000000000',
+    document: '00000000000',
     naturalness: 'Brasileiro',
     maritalstatus: 'casado',
-    dateofbirth: '00/00/00',
+    dateOfbirth: '00/00/00',
     phone: '(00) 0 00000000',
-    email: 'usuario@dominio.com.br',
+    mail: 'usuario@dominio.com.br',
     address: {
-      Postcode: '03541000',
+      postcode: '03541000',
       address: 'endereco do usuario',
       number: '000',
       complement: 'informacao complementar',
       neighborhood: 'bairro',
-      city:'cidade',
+      city: 'cidade',
     },
   },
   {
     id: 3,
-    name: 'Antonio Oliveira',
+    name: 'Marcos Antonio Lima',
     sex: 'Masculino',
-    cpf: '00000000000',
+    document: '00000000000',
     naturalness: 'Brasileiro',
     maritalstatus: 'casado',
-    dateofbirth: '00/00/00',
+    dateOfbirth: '00/00/00',
     phone: '(00) 0 00000000',
-    email: 'usuario@dominio.com.br',
+    mail: 'usuario@dominio.com.br',
     address: {
-      Postcode: '03541000',
+      postcode: '03541000',
       address: 'endereco do usuario',
       number: '000',
       complement: 'informacao complementar',
       neighborhood: 'bairro',
-      city:'cidade',
+      city: 'cidade',
     },
   },
-
 ];
+
+export default list;

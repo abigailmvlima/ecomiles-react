@@ -2,14 +2,52 @@ import { useNavigate } from 'react-router-dom';
 
 import Menu from 'components/menu';
 
+import listPacients from 'api/mock/listPacients';
 import ButtonGo from 'components/buttonGo';
 import InputDefault from 'components/inputDefault';
 import ListPacient from 'components/listPacient';
 import { EActiveView } from 'domains/enums/EActiveView';
+import { TFHIRPacient } from 'domains/types/TFHIR';
+import { TListPacient } from 'domains/types/TListPacient';
+import { useEffect, useState } from 'react';
 import * as S from './styles';
 
 const ViewListPacient = () => {
   const navigate = useNavigate();
+  const [pacients, setPacients] = useState<TListPacient[]>([]);
+
+  const loadData = () => {
+    const temp = listPacients.map((p: TFHIRPacient) => ({
+      id: {
+        value: p.id,
+      },
+      name: {
+        title: p.name,
+      },
+      phone: {
+        title: p.phone,
+      },
+      mail: {
+        title: p.mail,
+      },
+      dateBirth: {
+        title: p.dateOfbirth,
+      },
+      city: {
+        title: p.address.address,
+      },
+      actions: {
+        title: p.address.address,
+      },
+      data: p,
+    }));
+
+    setPacients(temp || []);
+  };
+
+  useEffect(() => {
+    loadData();
+  }, []);
 
   return (
     <S.Container>
@@ -34,83 +72,7 @@ const ViewListPacient = () => {
           <ButtonGo title={'NOVO'} onClick={() => {}} />
         </S.Search>
         <S.Pacient>
-          <ListPacient
-            data={[
-              {
-                id: {
-                  value: 1,
-                },
-
-                name: {
-                  title: 'Usuario 01',
-                },
-                phone: {
-                  title: '(11)9-9999-9999',
-                },
-                mail: {
-                  title: 'emaildousuario@dominio.com',
-                },
-                dateBirth: {
-                  title: '10/11/2012',
-                },
-                city: {
-                  title: 'Cidade do Usuario',
-                },
-                actions: {
-                  title: '',
-                },
-              },
-
-              {
-                id: {
-                  value: 2,
-                },
-
-                name: {
-                  title: 'Usuario 02',
-                },
-                phone: {
-                  title: '(11)9-9999-9999',
-                },
-                mail: {
-                  title: 'emaildousuario@dominio.com',
-                },
-                dateBirth: {
-                  title: '10/11/2012',
-                },
-                city: {
-                  title: 'Cidade do Usuario',
-                },
-                actions: {
-                  title: '',
-                },
-              },
-
-              {
-                id: {
-                  value: 3,
-                },
-                name: {
-                  title: 'Usuario 03',
-                },
-                phone: {
-                  title: '(11)9-9999-9999',
-                },
-                mail: {
-                  title: 'emaildousuario@dominio.com',
-                },
-                dateBirth: {
-                  title: '10/11/2012',
-                },
-                city: {
-                  title: 'Cidade do Usuario',
-                },
-                actions: {
-                  title: '',
-                },
-              },
-            ]}
-          />
+          <ListPacient data={pacients || []} />
         </S.Pacient>
       </S.Body>
       <S.Footer></S.Footer>

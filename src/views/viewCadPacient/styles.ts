@@ -64,7 +64,7 @@ export const FooterButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 25px 15px;
+  margin: 25px 2%;
 `;
 
 export const FooterLeft = styled.div`
@@ -124,11 +124,10 @@ export const Form = styled.div`
   flex-wrap: wrap;
 `;
 
-export const 
-FormRow = styled.div`
+export const FormRow = styled.div`
   width: 100%;
   margin-bottom: 5px;
-  margin: 0 1%;
+  margin: 0 2%;
 `;
 
 export const Name = styled.div`

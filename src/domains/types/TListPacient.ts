@@ -1,11 +1,39 @@
 import { RuleSet } from 'styled-components';
 
 export type TListPacient = {
-  [any: string]: {
-    title?: string;
-    value?: any;
+  [EPacientTitles.id]: {
+    value: string | number;
   };
+  name: {
+    title: string;
+  };
+  phone: {
+    title: string;
+  };
+  mail: {
+    title: string;
+  };
+  dateBirth: {
+    title: string;
+  };
+  city: {
+    title: string;
+  };
+  actions: {
+    title: string;
+  };
+  [key: string]: any;
 };
+
+export enum EPacientTitles {
+  id = 'id',
+  name = 'name',
+  phone = 'phone',
+  mail = 'mail',
+  dateBirth = 'dateBirth',
+  city = 'city',
+  actions = 'actions',
+}
 
 export type TTitles = {
   name: string;
@@ -14,3 +42,5 @@ export type TTitles = {
   css?: RuleSet<object>;
   ccsTitle?: RuleSet<object>;
 };
+
+export type TOnchangeData = { name: string; value: string };
