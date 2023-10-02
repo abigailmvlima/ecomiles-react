@@ -6,6 +6,30 @@ const colors = {
   v4: '#949494',
   v5: '#92d5f1',
   v6: '#4795b6',
+
+  btDefaultBg: '#C0ECFF',
+  btDefaultBgHover: '#8bbed4',
+  btDefaultBgActive: '#719fb3',
+  btDefaultBorder: '#DAEFF9',
+  btDefaultColor: '#0876A6',
+
+  btRemoveBg: '#B93E3E',
+  btRemoveBgHover: '#d84e4e',
+  btRemoveBgActive: '#953131',
+  btRemoveBorder: '#FF8E8E',
+  btRemoveColor: '#FFFFFF',
+
+  btSaveBg: '#DAEFF9',
+  btSaveBgHover: '#ecf5f9',
+  btSaveBgActive: '#b1c1c9',
+  btSaveBorder: '#DAEFF9',
+  btSaveColor: '#0876A6',
+
+  btCancelBg: '#0882B7',
+  btCancelBgHover: '#159eda',
+  btCancelBgActive: '#0882B7',
+  btCancelBorder: '#66ADCC',
+  btCancelColor: '#FFFFFF',
 };
 
 export default colors;
