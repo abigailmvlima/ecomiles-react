@@ -1,5 +1,6 @@
 import 'fontsource-inter';
 import 'fontsource-lato';
+import 'fontsource-lato/latin.css';
 import 'fontsource-roboto';
 import './index.css';
 import RouteController from './routeController';

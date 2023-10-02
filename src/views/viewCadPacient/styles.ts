@@ -21,6 +21,7 @@ export const Header = styled.div`
   height: 260px;
   margin: 0 5%;
   background-color: ${themes.colors.white};
+  font-family: ${themes.fontFamily.inter};
 `;
 
 export const Title = styled.div`
@@ -94,30 +95,70 @@ export const Input = styled.div`
 
 export const SubTitle = styled.div`
   font-size: 20px;
+  color: ${themes.colors.white};
+  font-family: ${themes.fontFamily.lato};
+  font-weight: 900;
+  letter-spacing: 2px;
 `;
+
 export const Form = styled.div`
   flex-wrap: wrap;
 `;
+
+export const FormRow = styled.div`
+  width: 100%;
+`;
+
 export const Name = styled.div`
-  width: 70%;
+  flex-grow: 1;
+  margin-right: 15px;
 `;
 export const Sexy = styled.div`
-  width: 30%;
+  width: 20%;
 `;
 export const CPF = styled.div`
-  width: 30%;
+  width: 20%;
+  margin-right: 15px;
 `;
-export const Naturalidade = styled.div`
-  width: 50%;
-`;
-export const DtNascimento = styled.div``;
-export const StateCivil = styled.div``;
-export const Phone = styled.div``;
-export const Mail = styled.div``;
 
-export const CEP = styled.div``;
-export const Endereco = styled.div``;
-export const Numero = styled.div``;
-export const Complemento = styled.div``;
-export const Bairro = styled.div``;
-export const Cidade = styled.div``;
+export const Naturalidade = styled.div`
+  flex-grow: 1;
+  margin-right: 15px;
+`;
+export const DtNascimento = styled.div`
+  width: 20%;
+`;
+export const StateCivil = styled.div`
+  width: 20%;
+  margin-right: 15px;
+`;
+export const Phone = styled.div`
+  width: 20%;
+  margin-right: 15px;
+`;
+export const Mail = styled.div`
+  flex-grow: 1;
+`;
+
+export const CEP = styled.div`
+  width: 20%;
+  margin-right: 15px;
+`;
+export const Endereco = styled.div`
+  flex-grow: 1;
+  margin-right: 15px;
+`;
+export const Numero = styled.div`
+  width: 10%;
+`;
+export const Complemento = styled.div`
+  width: 20%;
+  margin-right: 15px;
+`;
+export const Bairro = styled.div`
+  flex-grow: 1;
+  margin-right: 15px;
+`;
+export const Cidade = styled.div`
+  width: 45%;
+`;

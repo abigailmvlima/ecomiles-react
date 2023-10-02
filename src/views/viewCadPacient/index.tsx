@@ -26,51 +26,61 @@ const ViewListPacient = () => {
         <S.Content>
           <S.SubTitle>IDENTIFICAÇÃO</S.SubTitle>
           <S.Form>
-            <S.Name>
-              <InputDefault />
-            </S.Name>
-            <S.Sexy>
-              <InputDefault />
-            </S.Sexy>
-            <S.CPF>
-              <InputDefault />
-            </S.CPF>
-            <S.Naturalidade>
-              <InputDefault />
-            </S.Naturalidade>
-            <S.DtNascimento>
-              <InputDefault />
-            </S.DtNascimento>
-            <S.StateCivil>
-              <InputDefault />
-            </S.StateCivil>
-            <S.Phone>
-              <InputDefault />
-            </S.Phone>
-            <S.Mail>
-              <InputDefault />
-            </S.Mail>
+            <S.FormRow>
+              <S.Name>
+                <InputDefault label={'Nome'} />
+              </S.Name>
+              <S.Sexy>
+                <InputDefault label={'Sexo'} />
+              </S.Sexy>
+            </S.FormRow>
+            <S.FormRow>
+              <S.CPF>
+                <InputDefault label={'CPF'} />
+              </S.CPF>
+              <S.Naturalidade>
+                <InputDefault label={'Naturalidade'} />
+              </S.Naturalidade>
+              <S.StateCivil>
+                <InputDefault label={'Estado Civil'} />
+              </S.StateCivil>
+              <S.DtNascimento>
+                <InputDefault label={'Dt.Nascimento'} />
+              </S.DtNascimento>
+            </S.FormRow>
+            <S.FormRow>
+              <S.Phone>
+                <InputDefault label={'Celular'} />
+              </S.Phone>
+              <S.Mail>
+                <InputDefault label={'E-Mail'} />
+              </S.Mail>
+            </S.FormRow>
           </S.Form>
           <S.SubTitle>ENDEREÇO</S.SubTitle>
           <S.Form>
-            <S.CEP>
-              <InputDefault />
-            </S.CEP>
-            <S.Endereco>
-              <InputDefault />
-            </S.Endereco>
-            <S.Numero>
-              <InputDefault />
-            </S.Numero>
-            <S.Complemento>
-              <InputDefault />
-            </S.Complemento>
-            <S.Bairro>
-              <InputDefault />
-            </S.Bairro>
-            <S.Cidade>
-              <InputDefault />
-            </S.Cidade>
+            <S.FormRow>
+              <S.CEP>
+                <InputDefault label={'CEP'} />
+              </S.CEP>
+              <S.Endereco>
+                <InputDefault label={'Endereco'} />
+              </S.Endereco>
+              <S.Numero>
+                <InputDefault label={'Numero'} />
+              </S.Numero>
+            </S.FormRow>
+            <S.FormRow>
+              <S.Complemento>
+                <InputDefault label={'Complemento'} />
+              </S.Complemento>
+              <S.Bairro>
+                <InputDefault label={'Bairro'} />
+              </S.Bairro>
+              <S.Cidade>
+                <InputDefault label={'Cidade'} />
+              </S.Cidade>
+            </S.FormRow>
           </S.Form>
         </S.Content>
       </S.Body>
