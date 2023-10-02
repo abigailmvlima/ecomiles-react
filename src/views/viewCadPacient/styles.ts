@@ -60,11 +60,26 @@ export const Button = styled.div`
   display: flex;
 `;
 
-export const Footer = styled.div`
+export const FooterButton = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 15px 5%;
+  margin: 15px 0;
+`;
+
+export const FooterLeft = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const FooterRight = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+  & > div {
+    margin-left: 15px;
+  }
 `;
 
 export const FooterContent = styled.div`

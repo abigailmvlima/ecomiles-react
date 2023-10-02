@@ -2,8 +2,10 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import Menu from 'components/menu';
 
+import ButtonGo from 'components/buttonGo';
 import InputDefault from 'components/inputDefault';
 import { EActiveView } from 'domains/enums/EActiveView';
+import { EButtonType } from 'domains/enums/EButtons';
 import * as S from './styles';
 
 const ViewListPacient = () => {
@@ -82,9 +84,29 @@ const ViewListPacient = () => {
               </S.Cidade>
             </S.FormRow>
           </S.Form>
+          <S.FooterButton>
+            <S.FooterLeft>
+              <ButtonGo
+                title={'APAGAR'}
+                onClick={() => {}}
+                type={EButtonType.remove}
+              />
+            </S.FooterLeft>
+            <S.FooterRight>
+              <ButtonGo
+                title={'CANCELAR'}
+                onClick={() => {}}
+                type={EButtonType.cancel}
+              />
+              <ButtonGo
+                title={'SALVAR'}
+                onClick={() => {}}
+                type={EButtonType.save}
+              />
+            </S.FooterRight>
+          </S.FooterButton>
         </S.Content>
       </S.Body>
-      <S.Footer></S.Footer>
     </S.Container>
   );
 };
