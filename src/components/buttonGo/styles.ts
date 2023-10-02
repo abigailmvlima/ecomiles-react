@@ -84,10 +84,10 @@ export const Title = styled.div<ITitleProps>`
   font-family: ${themes.fontFamily.inter};
   font-weight: 100;
   letter-spacing: 3px;
-  margin: 0 15px;
+  margin: 0 10px;
   flex-wrap: wrap;
   line-height: 35px;
-  padding: 0 30px;
+  padding: 0 15px;
 
   color: ${(p: IContainerProps) => {
     if (p.type == EButtonType.default) {
