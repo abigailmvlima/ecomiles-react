@@ -10,7 +10,7 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  margin: 15px 5%;
+  margin: 10px 5%;
   flex-direction: column;
 `;
 
@@ -18,7 +18,7 @@ export const Header = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 260px;
+  height: 240px;
   margin: 0 5%;
   background-color: ${themes.colors.white};
   font-family: ${themes.fontFamily.inter};
@@ -99,6 +99,8 @@ export const SubTitle = styled.div`
   font-family: ${themes.fontFamily.lato};
   font-weight: 900;
   letter-spacing: 2px;
+  margin-bottom: 25px;
+  margin-top: 25px;
 `;
 
 export const Form = styled.div`
@@ -107,6 +109,7 @@ export const Form = styled.div`
 
 export const FormRow = styled.div`
   width: 100%;
+  margin-bottom: 10px;
 `;
 
 export const Name = styled.div`

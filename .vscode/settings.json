@@ -92,7 +92,7 @@
     "*.js": "javascript"
   },
   "liveServer.settings.donotShowInfoMsg": true,
-  "window.zoomLevel": 4,
+  "window.zoomLevel": 3,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always"
