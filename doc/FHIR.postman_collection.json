@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "ab7faed7-f33c-4d95-b97a-20cf31222529",
+		"name": "FHIR",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3890866",
+		"_collection_link": "https://lightstoreapi.postman.co/workspace/Codetime~faa4baf8-e9e6-40be-b5e7-ce13f1859cb8/collection/3890866-ab7faed7-f33c-4d95-b97a-20cf31222529?action=share&source=collection_link&creator=3890866"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/pacients",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pacients Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"active\": true,\n    \"name\": [\n        {\n            \"use\": \"official\",\n            \"family\": \"LastName\",\n            \"given\": [\n                \"FirstName\",\n                \"MiddleName\"\n            ]\n        }\n    ],\n    \"telecom\": [\n        {\n            \"system\": \"phone\",\n            \"value\": \"(11) 99988-7766\",\n            \"use\": \"mobile\",\n            \"rank\": 1\n        }\n    ],\n    \"gender\": \"male\",\n    \"birthDate\": \"1974-12-25\",\n    \"address\": [\n        {\n            \"use\": \"home\",\n            \"type\": \"both\",\n            \"text\": \"534 Erewhon St PeasantVille, Rainbow, Vic  3999\",\n            \"line\": [\n                \"534 Erewhon St\"\n            ],\n            \"city\": \"PleasantVille\",\n            \"district\": \"Rainbow\",\n            \"state\": \"Vic\",\n            \"postalCode\": \"3999\",\n            \"period\": {\n                \"start\": \"1974-12-25\"\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/patients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pacients Copy 2",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/patients/5b0120ae-6606-4952-a086-038a264c433b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients",
+						"5b0120ae-6606-4952-a086-038a264c433b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/pacients Copy 3",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"resourceType\": \"Patient\",\n    \"id\": \"4bf4c96b-9cfa-411d-8608-4ac3520c0208\",\n    \"active\": false,\n    \"birthDate\": \"1979-11-04\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/patients/4bf4c96b-9cfa-411d-8608-4ac3520c0208",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"patients",
+						"4bf4c96b-9cfa-411d-8608-4ac3520c0208"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
