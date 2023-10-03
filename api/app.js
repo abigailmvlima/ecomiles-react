@@ -7,7 +7,15 @@ var cookieParser = require("cookie-parser");
 // var logger = require('morgan');
 const bodyParser = require("body-parser");
 const { azureConfig } = require("./config");
-const FhirClient = require("fhir-kit-client");
+
+const {
+  getAuthToken,
+  postPatient,
+  printPatientInfo,
+  getPatients,
+  deletePatients,
+  updatePatients,
+} = require("./fhir");
 
 var app = express();
 
@@ -40,37 +48,33 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use(express.json());
 
-// Rota para cadastrar um paciente
 app.get("/patients", async (req, res) => {
-  try {
-    const client = new FhirClient({
-      baseUrl: azureConfig.fhirEndpoint,
-      fhirEndpoint: process.env.VALUE_ID,
-      authentication: {
-        clientId: azureConfig.clientId,
-        clientSecret: azureConfig.clientSecret,
-        authorityHost: azureConfig.authorityHost,
-      },
-    });
+  const accessToken = await getAuthToken();
+  const data = await getPatients(accessToken);
 
-    // Consulta para buscar todos os pacientes
-    const bundle = await client.search({ resourceType: "Patient" });
+  res.json(data?.entry || []);
+});
 
-    // Extraia a lista de pacientes do bundle de resposta
-    const patients = bundle.entry?.map((entry) => entry.resource) || [];
+app.post("/patients", async (req, res) => {
+  console.log(123);
+  const accessToken = await getAuthToken();
+  const patientId = await postPatient(accessToken, req.body);
+  res.json({ patientId });
+});
 
-    // Responda com a lista de pacientes em formato FHIR
-    res.json({
-      resourceType: "Bundle",
-      type: "searchset",
-      entry: patients.map((patient) => ({
-        resource: patient,
-      })),
-    });
-  } catch (error) {
-    console.error("Erro ao listar pacientes:", error);
-    res.status(500).json({ error: "Erro ao listar pacientes" });
-  }
+app.delete("/patients/:id", async (req, res) => {
+  const patientId = req.params.id;
+  console.log(999, patientId);
+  const accessToken = await getAuthToken();
+  const data = await deletePatients(patientId, accessToken);
+  res.json(data);
+});
+
+app.put("/patients/:id", async (req, res) => {
+  const patientId = req.params.id;
+  const accessToken = await getAuthToken();
+  const data = await updatePatients(patientId, accessToken, req.body);
+  res.json(data);
 });
 
 // catch 404 and forward to error handler
