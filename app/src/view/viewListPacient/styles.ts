@@ -6,7 +6,7 @@ export const Container = styled.SafeAreaView`
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
-  background-color: ${themes.colors.v2};
+  background-color: ${themes.colors.v1};
 `;
 
 export const Buttons = styled.View`

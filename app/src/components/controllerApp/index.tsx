@@ -9,7 +9,7 @@ import * as St from "./styles";
 const ControllerApp = ({ children }: any) => {
   const history = useHistory();
   const stateHistory: THistory = useSelector(
-    (state: TAppState) => state.history,
+    (state: TAppState) => state.history
   );
 
   useEffect(() => {
@@ -19,7 +19,6 @@ const ControllerApp = ({ children }: any) => {
       }
       return;
     }
-    console.log(111, stateHistory);
     history.push(stateHistory.route || "", stateHistory.data);
   }, [stateHistory]);
 

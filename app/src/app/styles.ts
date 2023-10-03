@@ -11,12 +11,12 @@ export const Container = styled(GestureHandlerRootView)`
   display: flex;
   width: ${screenWidth};
   height: ${screenHeight};
-  background-color: ${themes.colors.v7};
+
   color: ${themes.colors.v1};
   position: relative;
 `;
 
-export const Content = styled.SafeAreaView`
+export const Content = styled.View`
   display: flex;
   flex-grow: 1;
 `;

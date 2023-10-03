@@ -3,7 +3,7 @@ import { THistory } from "@domain/types/THistory";
 import { TNavigateRoute, TNavigation } from "@domain/types/TNavigation";
 import show from "@show/index";
 import { pushHistory } from "@stores/store.history";
-import React, { createContext, useEffect } from "react";
+import React, { createContext } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 export const ContextNavigation = createContext({} as any);
@@ -15,20 +15,14 @@ export default ({ children }: any) => {
     (state: TAppState) => state.history
   );
 
-  useEffect(() => {
-    // validacao de logado
-  }, []);
-
   const goNow = (newRoute: string, data?: any) => {
     dispatch(pushHistory({ route: newRoute, data }));
   };
 
   const route: TNavigateRoute = {
     home: (data: any) => goNow(show.route.home, data),
-    login: (data: any) => goNow(show.route.login, data),
-    message: (data: any) => goNow(show.route.message, data),
-    codeBar: (data: any) => goNow(show.route.codeBar, data),
-    register: (data: any) => goNow(show.route.register, data),
+    listPacient: (data: any) => goNow(show.route.listPacient, data),
+    cadPaient: (data: any) => goNow(show.route.cadPacient, data),
   };
 
   const navigation: TNavigation = {
@@ -37,7 +31,7 @@ export default ({ children }: any) => {
     go: goNow,
     goBack: () => {
       dispatch(
-        pushHistory({ route: stateHitory?.routeOld || show.route.login })
+        pushHistory({ route: stateHitory?.routeOld || show.route.home })
       );
     },
   };

@@ -1,12 +1,8 @@
 export enum ERoute {
   splash = "/",
-  home = "/home",
-  login = "/",
-  message = "/message",
-  codeBar = "/codebar",
-  register = "/register",
-  registerPersonStep1 = "/registerpersonstep1",
-  registerCompanyStep1 = "/registercompanystep1",
+  home = "/",
+  listPacient = "/listpacient",
+  cadPacient = "/cadpacient",
 }
 
 const route = ERoute;

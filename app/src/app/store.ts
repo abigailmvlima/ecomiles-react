@@ -33,7 +33,7 @@ const logMiddleware =
 
 export const store = createStore(
   persistedReducer,
-  composeWithDevTools(applyMiddleware(logMiddleware, sagaMiddleware)),
+  composeWithDevTools(applyMiddleware(logMiddleware, sagaMiddleware))
 );
 sagaMiddleware.run(rootSaga);
 

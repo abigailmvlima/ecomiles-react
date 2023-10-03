@@ -2,9 +2,10 @@ const color = {
   white: "#fff",
   black: "#000000",
 
-  v1: "#fff",
-  v2: "#000000",
-  v3: "#E36E3D",
+  v1: "#0882B7",
+  v2: "#EFFAFF",
+  v3: "#BADCEB",
+
   v4: "#AF9B92",
   v5: "#D4D4DC",
   v6: "#373737",

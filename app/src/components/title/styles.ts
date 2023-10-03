@@ -10,17 +10,17 @@ interface IText {
 
 const CS1 = css``;
 const CS2 = css`
-  font-size: 17px;
-  font-family: ${themes.fonts.interBold};
+  font-size: 12px;
+  font-family: ${themes.fonts.Archivo_300Light};
   letter-spacing: 2px;
 `;
 
 const CS3 = css`
-  font-size: 24px;
+  font-size: 17px;
 `;
 
 const CS4 = css`
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 1px;
 `;
 
@@ -34,7 +34,6 @@ export const Container = styled.Text<IText>`
   font-family: ${themes.fonts.interBold};
   color: ${(p) => getColorTypeTitle(p.colorType)};
   letter-spacing: 3px;
-  margin: 5px 0;
   ${(p) => p.size == ETitleSize.s1 && CS1}
   ${(p) => p.size == ETitleSize.s2 && CS2}
   ${(p) => p.size == ETitleSize.s3 && CS3}

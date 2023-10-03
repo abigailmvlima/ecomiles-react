@@ -4,6 +4,8 @@
 /**/node_modules
 /client/node_modules
 /api/node_modules
+/api/.env
+
 /app/node_modules
 /node_modules
 /app/dist/
@@ -12,6 +14,7 @@
 /app/coverage
 /client/build
 /client/coverage
+
 
 # testing
 /coverage

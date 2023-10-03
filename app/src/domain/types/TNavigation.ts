@@ -15,10 +15,8 @@ export interface IFunctionAuthFace {
 
 export type TNavigateRoute = {
   home: INavigateRouteFunc;
-  login: INavigateRouteFunc;
-  message: INavigateRouteFunc;
-  codeBar: INavigateRouteFunc;
-  register: INavigateRouteFunc;
+  listPacient: INavigateRouteFunc;
+  cadPaient: INavigateRouteFunc;
 };
 
 export type TNavigation = {
