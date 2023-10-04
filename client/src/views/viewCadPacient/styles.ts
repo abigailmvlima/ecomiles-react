@@ -147,15 +147,15 @@ export const Naturalidade = styled.div`
   margin-right: 15px;
 `;
 export const DtNascimento = styled.div`
-  width: 20%;
+  width: 27%;
+  margin-right: 15px;
 `;
 export const StateCivil = styled.div`
-  width: 20%;
+  width: 30%;
   margin-right: 15px;
 `;
 export const Phone = styled.div`
   width: 20%;
-  margin-right: 15px;
 `;
 export const Mail = styled.div`
   flex-grow: 1;
@@ -181,5 +181,5 @@ export const Bairro = styled.div`
   margin-right: 15px;
 `;
 export const Cidade = styled.div`
-  width: 45%;
+  width: 50%;
 `;

@@ -36,7 +36,7 @@ const ListPacient = ({ data }: TProps) => {
         ccsTitle: S.ccsTitle,
       },
       {
-        name: EPacientTitles.dateBirth,
+        name: EPacientTitles.birthDate,
         label: 'Dt.Nascimento',
         css: S.ColDateBirth,
         ccsTitle: S.ccsTitle,

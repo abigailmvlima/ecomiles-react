@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 
 import Menu from 'components/menu';
 
-import listPacients from 'api/mock/listPacients';
+import { findPatient } from 'api';
 import ButtonGo from 'components/buttonGo';
 import InputDefault from 'components/inputDefault';
 import ListPacient from 'components/listPacient';
@@ -16,7 +16,13 @@ const ViewListPacient = () => {
   const navigate = useNavigate();
   const [pacients, setPacients] = useState<TListPacient[]>([]);
 
-  const loadData = () => {
+  const loadData = async () => {
+    const listPacients: any = await findPatient();
+    console.log(123, listPacients);
+    if (listPacients.err) {
+      return;
+    }
+
     const temp = listPacients.map((p: TFHIRPacient) => ({
       id: {
         value: p.id,
@@ -28,16 +34,16 @@ const ViewListPacient = () => {
         title: p.phone,
       },
       mail: {
-        title: p.mail,
+        title: p.email,
       },
-      dateBirth: {
-        title: p.dateOfbirth,
+      birthDate: {
+        title: p.birthDate,
       },
       city: {
-        title: p.address.address,
+        title: p?.address?.city,
       },
       actions: {
-        title: p.address.address,
+        title: p?.address?.address || '',
       },
       data: p,
     }));

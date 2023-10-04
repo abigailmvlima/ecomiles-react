@@ -3,18 +3,12 @@ require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const createError = require("http-errors");
 const path = require("path");
 const bodyParser = require("body-parser");
-
-const {
-  getAuthToken,
-  postPatient,
-  getPatients,
-  deletePatients,
-  updatePatients,
-} = require("./fhir");
+const routers = require("../src/routes");
 
 var app = express();
 
@@ -43,32 +37,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
+app.use(cors({ origin: "*" }));
 
-app.get("/patients", async (req, res) => {
-  const accessToken = await getAuthToken();
-  const data = await getPatients(accessToken);
-  res.json(data?.entry || []);
-});
-
-app.post("/patients", async (req, res) => {
-  const accessToken = await getAuthToken();
-  const patientId = await postPatient(accessToken, req.body);
-  res.json({ patientId });
-});
-
-app.delete("/patients/:id", async (req, res) => {
-  const patientId = req.params.id;
-  const accessToken = await getAuthToken();
-  const data = await deletePatients(patientId, accessToken);
-  res.json(data);
-});
-
-app.put("/patients/:id", async (req, res) => {
-  const patientId = req.params.id;
-  const accessToken = await getAuthToken();
-  const data = await updatePatients(patientId, accessToken, req.body);
-  res.json(data);
-});
+app.use("/", routers);
 
 app.use(function (req, res, next) {
   next(createError(404));

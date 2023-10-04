@@ -1,26 +1,23 @@
 import { RuleSet } from 'styled-components';
 
 export type TListPacient = {
-  [EPacientTitles.id]: {
-    value: string | number;
-  };
   name: {
     title: string;
   };
   phone: {
     title: string;
   };
-  mail: {
+  email: {
     title: string;
   };
-  dateBirth: {
+  birthDate: {
     title: string;
   };
   city: {
     title: string;
   };
   actions: {
-    title: string;
+    title?: string;
   };
   [key: string]: any;
 };
@@ -30,7 +27,7 @@ export enum EPacientTitles {
   name = 'name',
   phone = 'phone',
   mail = 'mail',
-  dateBirth = 'dateBirth',
+  birthDate = 'birthDate',
   city = 'city',
   actions = 'actions',
 }

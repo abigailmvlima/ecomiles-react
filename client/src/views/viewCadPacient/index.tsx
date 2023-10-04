@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import Menu from 'components/menu';
 
+import { deletePatient, updatePatient } from 'api';
 import ButtonGo from 'components/buttonGo';
 import InputDefault from 'components/inputDefault';
 import { EActiveView } from 'domains/enums/EActiveView';
@@ -20,6 +21,7 @@ const ViewListPacient = () => {
 
   useEffect(() => {
     const pacient: TFHIRPacient = state?.pacient?.data;
+    console.log(pacient);
     setData(pacient);
   }, [state]);
 
@@ -56,8 +58,8 @@ const ViewListPacient = () => {
               <S.Sexy>
                 <InputDefault
                   label={'Sexo'}
-                  name={'sex'}
-                  value={data?.sex}
+                  name={'gender'}
+                  value={data?.gender}
                   onChange={(d: TOnchangeData) => onChange(d)}
                 />
               </S.Sexy>
@@ -71,45 +73,38 @@ const ViewListPacient = () => {
                   onChange={(d: TOnchangeData) => onChange(d)}
                 />
               </S.CPF>
-              <S.Naturalidade>
-                <InputDefault
-                  label={'Naturalidade'}
-                  name={'naturalness'}
-                  value={data?.naturalness}
-                  onChange={(d: TOnchangeData) => onChange(d)}
-                />
-              </S.Naturalidade>
+
               <S.StateCivil>
                 <InputDefault
                   label={'Estado Civil'}
-                  name={'maritalstatus'}
-                  value={data?.maritalstatus}
+                  name={'maritalStatus'}
+                  value={data?.maritalStatus?.code}
                   onChange={(d: TOnchangeData) => onChange(d)}
                 />
               </S.StateCivil>
               <S.DtNascimento>
                 <InputDefault
                   label={'Dt.Nascimento'}
-                  name={'dateOfbirth'}
-                  value={data?.dateOfbirth}
+                  name={'birthDate'}
+                  value={data?.birthDate}
                   onChange={(d: TOnchangeData) => onChange(d)}
                 />
               </S.DtNascimento>
-            </S.FormRow>
-            <S.FormRow>
               <S.Phone>
                 <InputDefault
                   label={'Celular'}
-                  name={'sex'}
-                  value={data?.sex}
+                  name={'phone'}
+                  value={data?.phone}
                   onChange={(d: TOnchangeData) => onChange(d)}
                 />
               </S.Phone>
+            </S.FormRow>
+            <S.FormRow>
               <S.Mail>
                 <InputDefault
                   label={'E-Mail'}
-                  name={'mail'}
-                  value={data?.mail}
+                  name={'email'}
+                  value={data?.email}
                   onChange={(d: TOnchangeData) => onChange(d)}
                 />
               </S.Mail>
@@ -131,7 +126,16 @@ const ViewListPacient = () => {
                   label={'Endereco'}
                   name={'address'}
                   value={data?.address?.address}
-                  onChange={(d: TOnchangeData) => onChange(d)}
+                  onChange={(d: TOnchangeData) => {
+                    const temp: TFHIRPacient = {
+                      ...(data ? data : {}),
+                      address: {
+                        ...(data.address ? data.address : {}),
+                        address: d.value,
+                      },
+                    };
+                    setData(temp);
+                  }}
                 />
               </S.Endereco>
               <S.Numero>
@@ -139,25 +143,35 @@ const ViewListPacient = () => {
                   label={'Numero'}
                   name={'number'}
                   value={data?.address?.number}
-                  onChange={(d: TOnchangeData) => onChange(d)}
+                  onChange={(d: TOnchangeData) => {
+                    const temp: TFHIRPacient = {
+                      ...(data ? data : {}),
+                      address: {
+                        ...(data.address ? data.address : {}),
+                        number: d.value,
+                      },
+                    };
+                    setData(temp);
+                  }}
                 />
               </S.Numero>
             </S.FormRow>
             <S.FormRow>
-              <S.Complemento>
-                <InputDefault
-                  label={'Complemento'}
-                  name={'complement'}
-                  value={data?.address?.complement}
-                  onChange={(d: TOnchangeData) => onChange(d)}
-                />
-              </S.Complemento>
               <S.Bairro>
                 <InputDefault
                   label={'Bairro'}
                   name={'neighborhood'}
                   value={data?.address?.neighborhood}
-                  onChange={(d: TOnchangeData) => onChange(d)}
+                  onChange={(d: TOnchangeData) => {
+                    const temp: TFHIRPacient = {
+                      ...(data ? data : {}),
+                      address: {
+                        ...(data.address ? data.address : {}),
+                        neighborhood: d.value,
+                      },
+                    };
+                    setData(temp);
+                  }}
                 />
               </S.Bairro>
               <S.Cidade>
@@ -165,7 +179,16 @@ const ViewListPacient = () => {
                   label={'Cidade'}
                   name={'city'}
                   value={data?.address?.city}
-                  onChange={(d: TOnchangeData) => onChange(d)}
+                  onChange={(d: TOnchangeData) => {
+                    const temp: TFHIRPacient = {
+                      ...(data ? data : {}),
+                      address: {
+                        ...(data.address ? data.address : {}),
+                        city: d.value,
+                      },
+                    };
+                    setData(temp);
+                  }}
                 />
               </S.Cidade>
             </S.FormRow>
@@ -174,7 +197,12 @@ const ViewListPacient = () => {
             <S.FooterLeft>
               <ButtonGo
                 title={'APAGAR'}
-                onClick={() => {}}
+                onClick={async () => {
+                  const response = await deletePatient(data.id);
+                  if (!response.err) {
+                    navigate('/pacientes');
+                  }
+                }}
                 type={EButtonType.remove}
               />
             </S.FooterLeft>
@@ -186,7 +214,11 @@ const ViewListPacient = () => {
               />
               <ButtonGo
                 title={'SALVAR'}
-                onClick={() => {}}
+                onClick={async () => {
+                  if (data?.id && data?.id.length > 0) {
+                    const response = await updatePatient(data);
+                  }
+                }}
                 type={EButtonType.save}
               />
             </S.FooterRight>
