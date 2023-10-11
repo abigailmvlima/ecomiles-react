@@ -26,15 +26,12 @@ export const Base = styled.View`
   padding-bottom: 5px;
 `;
 
-export const Input = styled.TextInput`
+export const Input = styled.View`
   display: flex;
   flex-grow: 1;
   font-size: 15px;
-  margin-left: 8px;
   color: ${themes.colors.v16};
-  font-family: ${themes.fonts.Archivo_600SemiBold};
-  font-weight: 300;
-  letter-spacing: 0.5px;
+  margin-left: 8px;
 `;
 
 export const ErrorText = styled.Text`

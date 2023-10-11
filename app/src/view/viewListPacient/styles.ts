@@ -40,3 +40,7 @@ export const Logo = styled.View`
 export const Footer = styled.View`
   display: flex;
 `;
+
+export const Patient = styled.View`
+  display: flex;
+`;
