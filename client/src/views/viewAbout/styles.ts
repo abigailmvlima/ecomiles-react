@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  font-family: ${themes.fontFamily.inter};
+  font-family: ${themes.fontFamily.roboto};
   font-size: 190px;
 `;
 

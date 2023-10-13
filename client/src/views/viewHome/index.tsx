@@ -26,7 +26,7 @@ const ViewHome = () => {
         <S.PhotoBS />
         <S.UpdateBase>
           <S.UpdateTitle>Update</S.UpdateTitle>
-          <S.UpdateValue>10/12/2023</S.UpdateValue>
+          <S.UpdateValue>10/2023</S.UpdateValue>
         </S.UpdateBase>
       </S.Body>
     </S.Container>

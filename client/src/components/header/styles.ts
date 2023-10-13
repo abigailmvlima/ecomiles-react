@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import themes from 'themes/index';
 
 export const Container = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ export const Left = styled.div`
 
 export const Menu = styled.div`
   display: flex;
+  color: ${themes.colors.v8};
 `;
 
 export const Right = styled.div`
