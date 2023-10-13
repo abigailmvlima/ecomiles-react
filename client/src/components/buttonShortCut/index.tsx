@@ -1,4 +1,3 @@
-import svg from 'assets/svg';
 import { EImages } from 'domains/enums/EImages';
 import { MouseEventHandler } from 'react';
 import * as S from './styles';
@@ -15,13 +14,13 @@ const ButtonShortCut = ({ title, image, onClick }: TProps) => {
       <S.Content onClick={onClick}>
         <S.Titulo>{title}</S.Titulo>
         <S.Icone>
-          {image == EImages.list ? (
+          {/* {image == EImages.list ? (
             <svg.Health />
           ) : image == EImages.plus ? (
             <svg.Plus />
           ) : (
             <></>
-          )}
+          )} */}
         </S.Icone>
       </S.Content>
     </S.Container>

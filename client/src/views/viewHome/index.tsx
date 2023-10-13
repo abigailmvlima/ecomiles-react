@@ -1,10 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
-import ButtonShortCut from 'components/buttonShortCut';
-import Logo from 'components/logo';
-import Menu from 'components/menu';
-import SocialMedia from 'components/socialMedia';
-import { EImages } from 'domains/enums/EImages';
+import Header from 'components/header';
 
 import { EActiveView } from 'domains/enums/EActiveView';
 import * as S from './styles';
@@ -15,31 +11,24 @@ const ViewHome = () => {
   return (
     <S.Container>
       <S.Header>
-        <S.Logo>
-          <Logo />
-        </S.Logo>
-        <Menu active={EActiveView.home} />
+        <Header activeMenu={EActiveView.home} />
       </S.Header>
       <S.Body>
-        <S.Button>
-          <ButtonShortCut
-            title={`Lista\nPacientes`}
-            image={EImages.list}
-            onClick={() => navigate('/pacientes')}
-          />
-        </S.Button>
-        <S.Button>
-          <ButtonShortCut
-            title={`Cadastrar\nPaciente`}
-            image={EImages.plus}
-            onClick={() => navigate('/cadastro')}
-          />
-        </S.Button>
+        <S.BaseDescription>
+          <S.BSProfissional />
+          <S.TitleFullStack />
+          <S.Title>
+            Passionate about innovation through programming, with solid
+            technical experience and emphasis on collaboration in
+            multidisciplinary teams.
+          </S.Title>
+        </S.BaseDescription>
+        <S.PhotoBS />
+        <S.UpdateBase>
+          <S.UpdateTitle>Update</S.UpdateTitle>
+          <S.UpdateValue>10/12/2023</S.UpdateValue>
+        </S.UpdateBase>
       </S.Body>
-      <S.Footer>
-        <S.FooterContent />
-        <SocialMedia />
-      </S.Footer>
     </S.Container>
   );
 };

@@ -3,16 +3,17 @@ import themes from 'themes/index';
 
 const cssActive = css`
   font-weight: 900;
-  font-size: 23px;
+  font-size: 19px;
   font-family: ${themes.fontFamily.lato};
   letter-spacing: 2.76px;
+  color: #272727;
 
   &:hover {
-    color: #2fc5fb;
+    color: #a457ed;
   }
 
   &:active {
-    color: #657a7c;
+    color: #64368e;
   }
 `;
 
@@ -20,25 +21,22 @@ const cssDesactive = css`
   font-weight: 100;
   letter-spacing: 2.76px;
   font-family: ${themes.fontFamily.lato};
-  font-size: 23px;
-  color: #b0cccf;
+  font-size: 19px;
+  color: #272727;
 
   &:hover {
-    color: #2fc5fb;
+    color: #a457ed;
   }
 
   &:active {
-    color: #657a7c;
+    color: #64368e;
   }
 `;
 
 export const Container = styled.div`
   display: flex;
-  background-color: #0876a6;
-  width: 487px;
-  height: 76px;
-  border-radius: 0 0 20px 20px;
   justify-content: space-between;
+  margin: 8px;
 `;
 
 interface IButton {
@@ -47,13 +45,8 @@ interface IButton {
 
 export const Button = styled.div<IButton>`
   display: flex;
-  width: 50%;
-  color: #ffffff;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 14px;
   cursor: pointer;
-
+  margin: 8px 30px;
+  text-transform: uppercase;
   ${(p: IButton) => (p.active == true ? cssActive : cssDesactive)};
 `;

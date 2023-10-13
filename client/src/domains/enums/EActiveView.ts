@@ -1,4 +1,7 @@
 export enum EActiveView {
   home = 'home',
-  pacients = 'pacients',
+  about = 'about',
+  trainning = 'trainning',
+  expirience = 'expirience',
+  hobbies = 'hobbies',
 }
