@@ -50,13 +50,16 @@ export const PhotoBS = styled(svg.PhotoBS)`
 `;
 
 export const Title = styled.div`
+  font-family: ${themes.fontFamily.roboto};
+  font-weight: 800;
   display: flex;
-  font-size: 19px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 800;
   line-height: 26px;
   text-align: center;
   color: #9d9d9d;
-  width: 70%;
+  width: 75%;
+  letter-spacing: 3px;
 `;
 
 export const Footer = styled.div`
@@ -78,15 +81,21 @@ export const UpdateBase = styled.div`
 export const UpdateTitle = styled.div`
   display: flex;
   font-size: 19px;
-  font-weight: bold;
+  font-weight: 700;
   color: #9d9d9d;
   margin: 4px;
+  font-family: ${themes.fontFamily.roboto};
+  font-size: 13px;
+  letter-spacing: 3px;
 `;
 
 export const UpdateValue = styled.div`
   display: flex;
   font-size: 19px;
-  font-weight: bold;
+  font-weight: 800;
   color: #9d9d9d;
   margin: 4px;
+  font-family: ${themes.fontFamily.roboto};
+  font-size: 22px;
+  letter-spacing: 3px;
 `;

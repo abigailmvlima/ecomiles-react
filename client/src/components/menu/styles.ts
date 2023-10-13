@@ -4,9 +4,9 @@ import themes from 'themes/index';
 const cssActive = css`
   font-weight: 900;
   font-size: 19px;
-  font-family: ${themes.fontFamily.lato};
+  font-family: ${themes.fontFamily.koulen};
   letter-spacing: 2.76px;
-  color: #272727;
+  color: ${themes.colors.v8};
 
   &:hover {
     color: #a457ed;
@@ -20,7 +20,7 @@ const cssActive = css`
 const cssDesactive = css`
   font-weight: 100;
   letter-spacing: 2.76px;
-  font-family: ${themes.fontFamily.lato};
+  font-family: ${themes.fontFamily.koulen};
   font-size: 19px;
   color: #272727;
 

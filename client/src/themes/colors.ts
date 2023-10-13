@@ -7,6 +7,7 @@ const colors = {
   v5: '#92d5f1',
   v6: '#4795b6',
   v7: '#34CEFF',
+  v8: '#565656',
 
   btDefaultBg: '#C0ECFF',
   btDefaultBgHover: '#8bbed4',
