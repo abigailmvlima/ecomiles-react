@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
-  font-size: 190px;
 `;
 
 export const Header = styled.div`
@@ -32,12 +31,13 @@ export const Body = styled.div`
   display: flex;
   margin: 25px 5%;
   flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 export const Cols = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
   margin: 0 1px;
 `;
 
@@ -109,4 +109,50 @@ export const UpdateValue = styled.div`
   font-weight: bold;
   color: #9d9d9d;
   margin: 4px;
+`;
+
+export const Content = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-left: 60px;
+`;
+
+export const CousesBase = styled.div`
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+`;
+
+export const GraduationBase = styled.div`
+  display: flex;
+  width: 30%;
+`;
+
+export const LinguagesBase = styled.div`
+  display: flex;
+  width: 30%;
+`;
+
+export const ContentTitle = styled.div`
+  display: flex;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 22px;
+  font-weight: 800;
+  color: #5d5d5d;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+`;
+
+export const ContentValue = styled.div`
+  display: flex;
+  text-transform: capitalize;
+  font-family: 'Roboto';
+  font-size: 22px;
+  font-weight: 200;
+  color: #5d5d5d;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
 `;

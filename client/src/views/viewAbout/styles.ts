@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.roboto};
-  font-size: 190px;
 `;
 
 export const Header = styled.div`
@@ -55,6 +54,7 @@ export const BaseTitle = styled.div`
 export const MyTitle = styled(svg.Hello)`
   display: flex;
   margin: 0 15px 15px 15px;
+  margin-bottom: 25px;
 `;
 
 export const TitleFullStack = styled(svg.TitleFullStack)`
@@ -117,8 +117,11 @@ export const MapBase = styled.div`
 
 export const Description = styled.div`
   display: flex;
-  font-size: 25px;
   text-align: justify;
+  font-size: 23px;
+  color: #a8a8a8;
+  letter-spacing: 1px;
+  line-height: 36px;
 `;
 
 export const BaseIcon = styled.div`
@@ -126,20 +129,121 @@ export const BaseIcon = styled.div`
   font-size: 25px;
   text-align: justify;
   width: 100%;
-  justify-content: space-between;
   margin: 15px 0;
+  height: 150px;
+  justify-content: space-between;
+  align-items: flex-end;
 `;
 
 export const Icon = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: aqua;
 `;
 
 export const IconTitle = styled.div`
   display: flex;
+  margin: 5px 0;
+  font-family: ${themes.fontFamily.roboto};
+  font-weight: bold;
+  color: #aeaeae;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin-top: 15px;
 `;
 
 export const IconValue = styled.div`
   display: flex;
+  font-family: ${themes.fontFamily.roboto};
+  font-weight: 200;
+  color: #414141;
+  font-size: 22px;
+  letter-spacing: 2px;
+`;
+
+export const Form = styled.div`
+  display: flex;
+  margin: 65px 0 10px 0;
+  flex-direction: column;
+`;
+
+export const Input = styled.input`
+  display: flex;
+  width: 120px;
+  font-family: ${themes.fontFamily.roboto};
+  font-weight: 500;
+  color: #414141;
+  font-size: 22px;
+  letter-spacing: 2px;
+  border: 2px solid #bcbcbc;
+  padding: 18px;
+  margin-right: 20px;
+`;
+
+export const ButtonSearch = styled.div`
+  display: flex;
+  border: 2px solid #ffc5f3;
+  padding: 18px;
+  background-color: #ffdef7;
+  font-family: ${themes.fontFamily.roboto};
+  font-weight: 500;
+  color: #636363;
+  font-size: 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: #d4b3cd;
+  }
+
+  &:active {
+    background-color: #d77fc2;
+  }
+`;
+
+export const DisplayAddress = styled.div`
+  display: flex;
+  border: 2px solid #bcbcbc;
+  padding: 18px;
+  width: 70%;
+`;
+
+export const DisplayNeighborhood = styled.div`
+  display: flex;
+  border: 2px solid #bcbcbc;
+  padding: 18px;
+  width: 70%;
+`;
+
+export const DisplayCity = styled.div`
+  display: flex;
+  border: 2px solid #bcbcbc;
+  padding: 18px;
+  width: 70%;
+`;
+
+export const BaseLine = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #da75c4;
+  font-weight: 400;
+  font-family: 'Roboto';
+`;
+
+export const BaseInput = styled.div`
+  display: flex;
+  margin-bottom: 25px;
+`;
+
+export const Label = styled.div`
+  text-transform: uppercase;
+  display: flex;
+  font-family: 'Roboto';
+  margin: 20px 0 2px 0;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #acacac;
 `;

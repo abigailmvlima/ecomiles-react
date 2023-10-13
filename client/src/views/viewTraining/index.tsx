@@ -26,6 +26,17 @@ const ViewTraining = () => {
             <S.TitleSVG />
           </S.BaseSVG>
         </S.Cols>
+        <S.Content>
+          <S.CousesBase>
+            <S.ContentTitle>linux</S.ContentTitle>
+            <S.ContentValue>2022 faculty</S.ContentValue>
+
+            <S.ContentTitle>webdesigner</S.ContentTitle>
+            <S.ContentValue>2012 aorus</S.ContentValue>
+          </S.CousesBase>
+          <S.GraduationBase>Col1</S.GraduationBase>
+          <S.LinguagesBase>Col1</S.LinguagesBase>
+        </S.Content>
       </S.Body>
     </S.Container>
   );
