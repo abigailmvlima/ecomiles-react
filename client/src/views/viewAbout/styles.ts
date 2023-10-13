@@ -48,13 +48,13 @@ export const MeAbout = styled(svg.MeAbout)`
 
 export const BaseTitle = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
 `;
 
 export const MyTitle = styled(svg.Hello)`
   display: flex;
+  margin: 0 15px 15px 15px;
 `;
 
 export const TitleFullStack = styled(svg.TitleFullStack)`
@@ -108,4 +108,37 @@ export const UpdateValue = styled.div`
   font-weight: bold;
   color: #9d9d9d;
   margin: 4px;
+`;
+
+export const MapBase = styled.div`
+  display: flex;
+  background-color: aqua;
+`;
+
+export const Description = styled.div`
+  display: flex;
+  font-size: 25px;
+  text-align: justify;
+`;
+
+export const BaseIcon = styled.div`
+  display: flex;
+  font-size: 25px;
+  text-align: justify;
+  width: 100%;
+  justify-content: space-between;
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+`;
+
+export const IconTitle = styled.div`
+  display: flex;
+`;
+
+export const IconValue = styled.div`
+  display: flex;
 `;

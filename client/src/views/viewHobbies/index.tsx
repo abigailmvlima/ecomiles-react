@@ -12,7 +12,7 @@ const ViewHobbies = () => {
   return (
     <S.Container>
       <S.Header>
-        <Header activeMenu={EActiveView.trainning} />
+        <Header activeMenu={EActiveView.hobbies} />
         <S.ButtonBack>
           <ButtonGoHome />
         </S.ButtonBack>
