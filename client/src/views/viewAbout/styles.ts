@@ -127,6 +127,7 @@ export const BaseIcon = styled.div`
   text-align: justify;
   width: 100%;
   justify-content: space-between;
+  margin: 15px 0;
 `;
 
 export const Icon = styled.div`
