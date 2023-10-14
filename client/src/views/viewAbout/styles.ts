@@ -42,7 +42,7 @@ export const Cols = styled.div`
 
 export const MeAbout = styled(svg.MeAbout)`
   display: flex;
-  width: 100%;
+  width: 90%;
 `;
 
 export const BaseTitle = styled.div`
@@ -171,7 +171,8 @@ export const Input = styled.input`
   width: 120px;
   font-family: ${themes.fontFamily.roboto};
   font-weight: 500;
-  color: #414141;
+  color: #878787;
+  color: #;
   font-size: 22px;
   letter-spacing: 2px;
   border: 2px solid #bcbcbc;
@@ -186,7 +187,7 @@ export const ButtonSearch = styled.div`
   background-color: #ffdef7;
   font-family: ${themes.fontFamily.roboto};
   font-weight: 500;
-  color: #636363;
+  color: #878787;
   font-size: 20px;
   letter-spacing: 1px;
   cursor: pointer;
