@@ -49,4 +49,6 @@ export const Button = styled.div<IButton>`
   margin: 8px 30px;
   text-transform: uppercase;
   ${(p: IButton) => (p.active == true ? cssActive : cssDesactive)};
+  color: #565656;
+  font-family: ${themes.fontFamily.koulen};
 `;

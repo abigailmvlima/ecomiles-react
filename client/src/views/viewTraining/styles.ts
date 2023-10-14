@@ -43,7 +43,7 @@ export const Cols = styled.div`
 
 export const MyTitle = styled(svg.MyTrainings)`
   display: flex;
-  width: 100%;
+  width: 90%;
 `;
 
 export const BaseSVG = styled.div`
@@ -139,10 +139,10 @@ export const ContentTitle = styled.div`
   display: flex;
   text-transform: uppercase;
   font-family: 'Roboto';
-  font-size: 26px;
-  font-weight: bold;
-  color: #a3a3a3;
-  letter-spacing: 2px;
+  font-size: 23px;
+  font-weight: 800;
+  color: #b9b9b9;
+  letter-spacing: 3px;
   margin-bottom: 2px;
   margin-bottom: 20px;
 `;
@@ -159,7 +159,7 @@ export const ContentSubTitle = styled.div`
   font-family: 'Roboto';
   font-size: 20px;
   font-weight: 800;
-  color: #5d5d5d;
+  color: #878787;
   letter-spacing: 1px;
   margin-bottom: 5px;
 `;
@@ -169,8 +169,8 @@ export const ContentValue = styled.div`
   text-transform: capitalize;
   font-family: 'Roboto';
   font-size: 22px;
-  font-weight: 200;
-  color: #5d5d5d;
+  font-weight: 300;
+  color: #bdbdbd;
   letter-spacing: 2px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 `;

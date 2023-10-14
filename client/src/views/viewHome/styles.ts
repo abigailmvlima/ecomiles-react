@@ -41,7 +41,7 @@ export const BSProfissional = styled(svg.BSProfissional)`
 export const TitleFullStack = styled(svg.TitleFullStack)`
   display: flex;
   width: 50%;
-  margin: 15px 0;
+  margin: 35px 0;
 `;
 
 export const PhotoBS = styled(svg.PhotoBS)`
@@ -82,6 +82,7 @@ export const UpdateTitle = styled.div`
   display: flex;
   font-size: 19px;
   font-weight: 700;
+  text-transform: uppercase;
   color: #9d9d9d;
   margin: 4px;
   font-family: ${themes.fontFamily.roboto};

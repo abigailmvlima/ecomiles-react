@@ -37,7 +37,7 @@ const ViewTraining = () => {
 
   const linguagens = [
     {
-      text: 'ingles',
+      text: 'inglês',
     },
     {
       text: 'português',
