@@ -39,7 +39,7 @@ export const Cols = styled.div`
   width: 50%;
   margin: 0 1px;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-start;
 
 `;
 
@@ -56,7 +56,7 @@ export const BaseSVG = styled.div`
 
 export const TitleSVG = styled(svg.BSProfissional)`
   display: flex;
-  width: 100%;
+  width: 450px;
 `;
 
 export const TitleFullStack = styled(svg.TitleFullStack)`
@@ -103,7 +103,7 @@ export const ContentBase = styled.div`
 
 export const ContentTitle = styled.div`
   display: flex;
-  width: 25%;
+  width: 30%;
   font-size: 22px;
   font-family: 'Roboto';
   font-weight: bold;
@@ -113,7 +113,7 @@ export const ContentTitle = styled.div`
 
 export const ContentText = styled.div`
   display: flex;
-  width: 75%;
+  width: 70%;
   font-size: 22px;
   font-family: 'Roboto';
   font-weight: 200;
