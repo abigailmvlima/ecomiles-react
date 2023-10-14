@@ -11,7 +11,7 @@ const SocialMedia = () => {
         <svg.Instagram />
       </S.Instagram>
       <S.Youtube>
-        <svg.YouTube />
+        <svg.Linkedin />
       </S.Youtube>
     </S.Container>
   );
