@@ -25,15 +25,15 @@ const ViewHome = () => {
             multidisciplinary teams.
           </S.Title>
         </S.BaseDescription>
-        <S.PhotoBS />
+          <S.PhotoBS />
         <SocialMedia />
       </S.Body>
-      <S.UpdateContent>
+      {/* <S.UpdateContent>
         <S.UpdateBase>
           <S.UpdateTitle>Update</S.UpdateTitle>
           <S.UpdateValue>10/2023</S.UpdateValue>
         </S.UpdateBase>
-      </S.UpdateContent>
+      </S.UpdateContent> */}
     </S.Container>
   );
 };

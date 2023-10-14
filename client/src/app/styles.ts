@@ -11,12 +11,16 @@ export const Container = styled.div`
   height: 100vh;
   flex-direction: row;
   justify-content: center;
+  background-color: whitesmoke;
 `;
 
 
 export const Page = styled.div`
   display: flex;
-  min-width: 1280px;
-  max-width: 1920px;
+  border-left: 1px solid #ca9ce4;
+  border-right: 1px solid #ca9ce4;
+  width: 1280px;
+  background-color: white;
+
 
 `

@@ -11,12 +11,10 @@ const RouteController = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/detalhes/:id" Component={Details} /> */}
         <Route path={`/${EActiveView.about}`} Component={ViewAbout} />
-        <Route path={`/${EActiveView.trainning}`} Component={ViewTraining} />
         <Route path={`/${EActiveView.experience}`} Component={ViewExperience} />
         <Route path={`/${EActiveView.hobbies}`} Component={ViewHobbies} />
-
+        <Route path={`/${EActiveView.trainning}`} Component={ViewTraining} />
         <Route path="/" Component={ViewHome} />
         <Route path="*" Component={ViewNotFound} />
       </Routes>

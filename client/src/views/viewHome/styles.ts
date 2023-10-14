@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
-  font-size: 190px;
 `;
 
 export const Header = styled.div`
@@ -30,23 +29,22 @@ export const BaseDescription = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 40%;
 `;
 
 export const BSProfissional = styled(svg.BSProfissional)`
   display: flex;
-  width: 70%;
 `;
 
 export const TitleFullStack = styled(svg.TitleFullStack)`
   display: flex;
-  width: 50%;
   margin: 35px 0;
 `;
 
+
 export const PhotoBS = styled(svg.PhotoBS)`
-  display: flex;
-  width: 60%;
+  display: flex;  
+  width: 40%;
 `;
 
 export const Title = styled.div`

@@ -112,7 +112,7 @@ export const ExpirienceTitle = styled.div`
 export const ExpirienceResponsabilities = styled.div`
   display: flex;
   word-wrap: break-word;
-  width: 85%;
+  width: 80%;
   font-family: 'Roboto';
   font-weight: 300;
   line-height: 40px;
@@ -135,7 +135,7 @@ export const ExpiriencePosition = styled.div`
 
 export const ExpirienceLabel = styled.div`
   display: flex;
-  width: 15%;
+  width: 20%;
   font-family: 'Roboto';
   font-size: 19px;
   font-weight: 800;
