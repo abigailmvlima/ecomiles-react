@@ -37,12 +37,10 @@ export const Cols = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin: 0 1px;
 `;
 
 export const MyTitle = styled(svg.MyExperience)`
   display: flex;
-  width: 100%;
 `;
 
 export const BaseSVG = styled.div`
