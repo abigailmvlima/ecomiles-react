@@ -13,7 +13,7 @@ import { ReactComponent as PhotoBS } from './photoBS.svg';
 import { ReactComponent as TitleFullStack } from './titleFullStack.svg';
 import { ReactComponent as UpDate } from './upDate.svg';
 
-import { ReactComponent as Facebook } from './facebook.svg';
+import { ReactComponent as Facebook } from './iconFacebook.svg';
 import { ReactComponent as Instagram } from './instagram.svg';
 import { ReactComponent as YouTube } from './youtube.svg';
 

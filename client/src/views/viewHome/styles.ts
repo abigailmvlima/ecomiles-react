@@ -68,14 +68,21 @@ export const Footer = styled.div`
   align-items: center;
 `;
 
+export const UpdateContent = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+`
+
 export const UpdateBase = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 4px solid #aaaaaa;
-  padding: 4px 20px;
-
-  position: absolute;
-  bottom: 5%;
+  padding: 5px;
 `;
 
 export const UpdateTitle = styled.div`

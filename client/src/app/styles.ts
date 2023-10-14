@@ -9,4 +9,14 @@ export const Container = styled.div`
   display: flex;
   width: 100vw;
   height: 100vh;
+  flex-direction: row;
+  justify-content: center;
 `;
+
+
+export const Page = styled.div`
+  display: flex;
+  min-width: 1280px;
+  max-width: 1920px;
+
+`

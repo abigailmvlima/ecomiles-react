@@ -10,7 +10,9 @@ import * as S from './styles';
 const App = () => {
   return (
     <S.Container>
-      <RouteController />
+      <S.Page>
+        <RouteController />
+      </S.Page>
     </S.Container>
   );
 };
