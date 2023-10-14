@@ -4,6 +4,7 @@ import Header from 'components/header';
 
 import { EActiveView } from 'domains/enums/EActiveView';
 import * as S from './styles';
+import SocialMedia from 'components/socialMedia';
 
 const ViewHome = () => {
   const navigate = useNavigate();
@@ -24,6 +25,8 @@ const ViewHome = () => {
           </S.Title>
         </S.BaseDescription>
         <S.PhotoBS />
+        <SocialMedia />
+
         <S.UpdateBase>
           <S.UpdateTitle>Update</S.UpdateTitle>
           <S.UpdateValue>10/2023</S.UpdateValue>
