@@ -9,6 +9,44 @@ import * as S from './styles';
 const ViewTraining = () => {
   const navigate = useNavigate();
 
+  const courses = [
+    {
+      label: 'linux',
+      text: '2022 facult',
+    },
+    {
+      label: 'webdesigner',
+      text: '2012 aorus',
+    },
+    {
+      label: 'photoshop',
+      text: '2015 eabics',
+    },
+    {
+      label: 'elustrator',
+      text: '2015 semicos',
+    },
+  ];
+
+  const graduation = [
+    {
+      label: 'INTERNET SYSTEMS',
+      text: '2021 -2023 Faculty FIAP',
+    },
+  ];
+
+  const linguagens = [
+    {
+      text: 'ingles',
+    },
+    {
+      text: 'português',
+    },
+    {
+      text: 'espanhol',
+    },
+  ];
+
   return (
     <S.Container>
       <S.Header>
@@ -27,15 +65,34 @@ const ViewTraining = () => {
           </S.BaseSVG>
         </S.Cols>
         <S.Content>
-          <S.CousesBase>
-            <S.ContentTitle>linux</S.ContentTitle>
-            <S.ContentValue>2022 faculty</S.ContentValue>
+          <S.BaseCols>
+            <S.ContentTitle>Courses</S.ContentTitle>
+            {courses.map((i, key) => (
+              <S.ContentBase key={key}>
+                <S.ContentSubTitle>{i.label}</S.ContentSubTitle>
+                <S.ContentValue>{i.text}</S.ContentValue>
+              </S.ContentBase>
+            ))}
+          </S.BaseCols>
 
-            <S.ContentTitle>webdesigner</S.ContentTitle>
-            <S.ContentValue>2012 aorus</S.ContentValue>
-          </S.CousesBase>
-          <S.GraduationBase>Col1</S.GraduationBase>
-          <S.LinguagesBase>Col1</S.LinguagesBase>
+          <S.BaseCols>
+            <S.ContentTitle>graduation</S.ContentTitle>
+            {graduation.map((i, key) => (
+              <S.ContentBase key={key}>
+                <S.ContentSubTitle>{i.label}</S.ContentSubTitle>
+                <S.ContentValue>{i.text}</S.ContentValue>
+              </S.ContentBase>
+            ))}
+          </S.BaseCols>
+
+          <S.BaseCols>
+            <S.ContentTitle>linguagens</S.ContentTitle>
+            {linguagens.map((i, key) => (
+              <S.ContentBase key={key}>
+                <S.ContentValue>{i.text}</S.ContentValue>
+              </S.ContentBase>
+            ))}
+          </S.BaseCols>
         </S.Content>
       </S.Body>
     </S.Container>

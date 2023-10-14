@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
-  font-size: 190px;
 `;
 
 export const Header = styled.div`
@@ -31,7 +30,7 @@ export const ButtonBack = styled.div`
 export const Body = styled.div`
   display: flex;
   margin: 25px 5%;
-  flex-direction: row;
+  flex-direction: column;
 `;
 
 export const Cols = styled.div`
@@ -41,7 +40,7 @@ export const Cols = styled.div`
   margin: 0 1px;
 `;
 
-export const MyTitle = styled(svg.MyExpiriences)`
+export const MyTitle = styled(svg.MyExperience)`
   display: flex;
   width: 100%;
 `;
@@ -79,34 +78,48 @@ export const Title = styled.div`
   width: 70%;
 `;
 
-export const Footer = styled.div`
+
+export const Content = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 `;
 
-export const UpdateBase = styled.div`
+export const Expirience = styled.div`
   display: flex;
   flex-direction: column;
-  border: 4px solid #aaaaaa;
-  padding: 4px 20px;
+`
 
-  position: absolute;
-  bottom: 5%;
-`;
-
-export const UpdateTitle = styled.div`
+export const ExpirienceRow = styled.div`
   display: flex;
-  font-size: 19px;
-  font-weight: bold;
-  color: #9d9d9d;
-  margin: 4px;
+  flex-direction: column;
+  margin: 0 1px;
 `;
 
-export const UpdateValue = styled.div`
+export const ExpirienceLine = styled.div`
   display: flex;
-  font-size: 19px;
-  font-weight: bold;
-  color: #9d9d9d;
-  margin: 4px;
+  flex-direction: row;
+`
+
+export const ExpirienceTitle = styled.div`
+  display: flex;
+  flex-grow: 1;
+  word-wrap: break-word;
 `;
+
+export const ExpirienceResponsabilities = styled.div`
+  display: flex;
+  word-wrap: break-word;
+  width: 85%;
+
+`;
+
+export const ExpiriencePosition = styled.div`
+  display: flex;
+  flex-grow: 1;
+  word-wrap: break-word;
+`;
+
+export const ExpirienceLabel = styled.div`
+  display: flex;
+  width: 15%;
+`

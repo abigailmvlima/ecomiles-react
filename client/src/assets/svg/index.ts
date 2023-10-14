@@ -7,7 +7,7 @@ import { ReactComponent as IconEdit } from './iconEdit.svg';
 import { ReactComponent as Instagram } from './instagram.svg';
 import { ReactComponent as Mail } from './mail.svg';
 import { ReactComponent as MeAbout } from './meAbout.svg';
-import { ReactComponent as MyExpiriences } from './myExpiriences.svg';
+import { ReactComponent as MyExperience } from './myExperience.svg';
 import { ReactComponent as MyHobbies } from './myHobbies.svg';
 import { ReactComponent as MyTrainings } from './myTrainings.svg';
 import { ReactComponent as Phone } from './phone.svg';
@@ -29,7 +29,7 @@ const svg = {
   MeAbout,
   Hello,
   MyTrainings,
-  MyExpiriences,
+  MyExperience,
   MyHobbies,
   Mail,
   Phone,

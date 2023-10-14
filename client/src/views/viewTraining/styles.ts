@@ -119,7 +119,7 @@ export const Content = styled.div`
   margin-left: 60px;
 `;
 
-export const CousesBase = styled.div`
+export const BaseCols = styled.div`
   display: flex;
   width: 30%;
   flex-direction: column;
@@ -139,11 +139,29 @@ export const ContentTitle = styled.div`
   display: flex;
   text-transform: uppercase;
   font-family: 'Roboto';
-  font-size: 22px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #a3a3a3;
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+  margin-bottom: 20px;
+`;
+
+export const ContentBase = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+`;
+
+export const ContentSubTitle = styled.div`
+  display: flex;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+  font-size: 20px;
   font-weight: 800;
   color: #5d5d5d;
   letter-spacing: 1px;
-  margin-bottom: 2px;
+  margin-bottom: 5px;
 `;
 
 export const ContentValue = styled.div`
