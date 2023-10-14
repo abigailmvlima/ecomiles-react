@@ -76,7 +76,6 @@ export const Title = styled.div`
   width: 70%;
 `;
 
-
 export const Content = styled.div`
   display: flex;
   width: 100%;
@@ -85,39 +84,63 @@ export const Content = styled.div`
 export const Expirience = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const ExpirienceRow = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 0 1px;
+  margin: 30px 5px;
 `;
 
 export const ExpirienceLine = styled.div`
   display: flex;
   flex-direction: row;
-`
+`;
 
 export const ExpirienceTitle = styled.div`
   display: flex;
   flex-grow: 1;
   word-wrap: break-word;
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #a8a8a8;
 `;
 
 export const ExpirienceResponsabilities = styled.div`
   display: flex;
   word-wrap: break-word;
   width: 85%;
-
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #a8a8a8;
 `;
 
 export const ExpiriencePosition = styled.div`
   display: flex;
   flex-grow: 1;
   word-wrap: break-word;
+  font-family: 'Roboto';
+  font-weight: 300;
+  line-height: 40px;
+  font-size: 20px;
+  letter-spacing: 3px;
+  color: #a8a8a8;
 `;
 
 export const ExpirienceLabel = styled.div`
   display: flex;
   width: 15%;
-`
+  font-family: 'Roboto';
+  font-size: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 40px;
+  letter-spacing: 3px;
+  color: #878787;
+`;
