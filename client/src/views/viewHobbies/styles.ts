@@ -7,7 +7,6 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
-  font-size: 190px;
 `;
 
 export const Header = styled.div`
@@ -36,14 +35,16 @@ export const Body = styled.div`
 
 export const Cols = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 50%;
   margin: 0 1px;
+  justify-content: flex-start;
+  align-items: flex-end;
+
 `;
 
 export const MyTitle = styled(svg.MyHobbies)`
   display: flex;
-  width: 100%;
 `;
 
 export const BaseSVG = styled.div`
@@ -55,7 +56,7 @@ export const BaseSVG = styled.div`
 
 export const TitleSVG = styled(svg.BSProfissional)`
   display: flex;
-  width: 80%;
+  width: 100%;
 `;
 
 export const TitleFullStack = styled(svg.TitleFullStack)`
@@ -85,28 +86,38 @@ export const Footer = styled.div`
   align-items: center;
 `;
 
-export const UpdateBase = styled.div`
+export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  border: 4px solid #aaaaaa;
-  padding: 4px 20px;
+  margin: 60px 10% 25px 10%;
 
-  position: absolute;
-  bottom: 5%;
-`;
+  `
 
-export const UpdateTitle = styled.div`
+export const ContentBase = styled.div`
   display: flex;
-  font-size: 19px;
-  font-weight: bold;
-  color: #9d9d9d;
-  margin: 4px;
-`;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 35px;
+`
 
-export const UpdateValue = styled.div`
+export const ContentTitle = styled.div`
   display: flex;
-  font-size: 19px;
+  width: 25%;
+  font-size: 22px;
+  font-family: 'Roboto';
   font-weight: bold;
-  color: #9d9d9d;
-  margin: 4px;
-`;
+  color: #686868;
+  letter-spacing: 2px;
+`
+
+export const ContentText = styled.div`
+  display: flex;
+  width: 75%;
+  font-size: 22px;
+  font-family: 'Roboto';
+  font-weight: 200;
+  color: #686868;
+  letter-spacing: 2px;
+  text-align: justify;
+`
