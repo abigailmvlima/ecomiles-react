@@ -1,4 +1,3 @@
-import svg from 'assets/svg';
 import styled from 'styled-components';
 import themes from 'themes/index';
 
@@ -7,101 +6,113 @@ export const Container = styled.div`
   width: 100%;
   flex-direction: column;
   font-family: ${themes.fontFamily.inter};
-`;
-
-export const Header = styled.div`
-  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
   flex-direction: row;
-  justify-content: space-between;
-  margin: 0 5%;
+  background-color: #fdfffb;
+  border: 1px solid #dce5d8;
 `;
 
 export const Body = styled.div`
   display: flex;
-  margin: 0 5%;
+  flex-direction: column;
+  margin-bottom: 50px;
+`;
+
+export const Image = styled.div`
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+`;
+
+export const IconEcoMiles = styled.img`
+  display: flex;
+  width: 30%;
+`;
+
+export const Buttons = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 10%;
   justify-content: center;
   align-items: center;
 `;
 
-export const BaseDescription = styled.div`
+export const Button = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 4px 1px;
+  width: 40%;
+  margin: 0 3%;
+`;
+
+export const ButtonTitle = styled.div`
+  display: flex;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #54585c;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+`;
+
+export const ButtonImage = styled.div`
+  display: flex;
+`;
+
+export const ButtonImg = styled.img`
+  display: flex;
+  width: 100%;
+`;
+
+export const ButtonRules = styled.div`
+  display: flex;
+  margin: 0 15.5%;
+  font-size: 23px;
+  font-family: 'Roboto';
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: #585858;
+  text-align: justify;
+  line-height: 32px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+`;
+
+export const TitleBase = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
-`;
-
-export const BSProfissional = styled(svg.BSProfissional)`
-  display: flex;
-`;
-
-export const TitleFullStack = styled(svg.TitleFullStack)`
-  display: flex;
-  margin: 35px 0;
-`;
-
-
-export const PhotoBS = styled(svg.PhotoBS)`
-  display: flex;  
-  width: 40%;
+  margin: 0 10%;
+  margin-bottom: 40px;
 `;
 
 export const Title = styled.div`
-  font-family: ${themes.fontFamily.roboto};
-  font-weight: 800;
   display: flex;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 26px;
+  font-size: 38px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #212121;
+  margin: 5px;
   text-align: center;
-  color: #9d9d9d;
-  width: 75%;
-  letter-spacing: 3px;
 `;
 
-export const Footer = styled.div`
+export const SubTitle = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const UpdateContent = styled.div`
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`
-
-export const UpdateBase = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 4px solid #aaaaaa;
-  padding: 5px;
-`;
-
-export const UpdateTitle = styled.div`
-  display: flex;
-  font-size: 19px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #9d9d9d;
-  margin: 4px;
-  font-family: ${themes.fontFamily.roboto};
-  font-size: 13px;
-  letter-spacing: 3px;
-`;
-
-export const UpdateValue = styled.div`
-  display: flex;
-  font-size: 19px;
-  font-weight: 800;
-  color: #9d9d9d;
-  margin: 4px;
-  font-family: ${themes.fontFamily.roboto};
-  font-size: 22px;
-  letter-spacing: 3px;
+  font-size: 24px;
+  font-family: 'Roboto';
+  font-weight: 200;
+  letter-spacing: 2px;
+  color: #585858;
+  margin: 5px;
+  text-align: center;
+  line-height: 34px;
+  margin-bottom: 30px;
 `;

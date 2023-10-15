@@ -3,15 +3,15 @@ import { MouseEventHandler } from 'react';
 import * as S from './styles';
 
 type TProps = {
-  title: string;
+  label: string;
   onClick?: MouseEventHandler | undefined;
   type?: EButtonType;
 };
 
-const ButtonGo = ({ title, onClick, type = EButtonType.default }: TProps) => {
+const ButtonGo = ({ label, onClick, type = EButtonType.default }: TProps) => {
   return (
     <S.Container onClick={onClick} type={type}>
-      <S.Title type={type}>{title}</S.Title>
+      <S.Title type={type}>{label}</S.Title>
     </S.Container>
   );
 };

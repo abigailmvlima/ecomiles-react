@@ -4,16 +4,11 @@ import themes from 'themes/index';
 export const Container = styled.div`
   display: flex;
   flex-direction: row;
-  border: 2px solid rgba(6, 106, 149, 0.55);
-  border-radius: 20px;
-  width: 300px;
-  height: 320px;
 `;
 
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  margin: 25px;
   flex-grow: 1;
 `;
 
@@ -21,20 +16,11 @@ export const Titulo = styled.div`
   display: flex;
   color: ${themes.colors.v1};
   text-align: center;
-  font-size: 25px;
+  font-size: 18px;
   font-family: ${themes.fontFamily.inter};
-  font-weight: 700;
-  letter-spacing: 4.4px;
-  margin: 0 10px;
+  font-weight: 200;
+  letter-spacing: 1px;
   flex-wrap: wrap;
-  line-height: 35px;
-`;
-
-export const Icone = styled.div`
-  display: flex;
-  flex-grow: 1;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
+  margin: 4px 4px;
+  cursor: pointer;
 `;

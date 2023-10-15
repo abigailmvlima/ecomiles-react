@@ -12,7 +12,7 @@ export const Title = styled.div`
   text-align: center;
   font-size: 15px;
   font-family: ${themes.fontFamily.inter};
-  color: ${themes.colors.white};
+  color: #000;
   letter-spacing: 2px;
   margin-left: 5px;
 `;
@@ -26,7 +26,7 @@ export const Input = styled.input`
   width: 100%;
   font-size: 18px;
   font-family: ${themes.fontFamily.inter};
-  color: ${themes.colors.v2};
+  color: #000;
   border-radius: 10px;
   border: 1px solid ${themes.colors.v6};
   margin: 5px 0;

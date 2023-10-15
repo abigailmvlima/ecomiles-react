@@ -11,7 +11,7 @@ const Header = ({ activeMenu }: TProps) => {
   return (
     <S.Container>
       <S.Left>
-        <svg.LogoHeader />
+        <svg.LogoSmall />
       </S.Left>
       <S.Menu>
         <Menu active={activeMenu} />

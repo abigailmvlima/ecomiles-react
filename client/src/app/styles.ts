@@ -11,16 +11,10 @@ export const Container = styled.div`
   height: 100vh;
   flex-direction: row;
   justify-content: center;
-  background-color: whitesmoke;
+  background-color: #f3f9ee;
 `;
-
 
 export const Page = styled.div`
   display: flex;
-  border-left: 1px solid #ca9ce4;
-  border-right: 1px solid #ca9ce4;
-  width: 1280px;
-  background-color: white;
-
-
-`
+  width: 70%;
+`;

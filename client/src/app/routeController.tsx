@@ -1,21 +1,23 @@
 import { EActiveView } from 'domains/enums/EActiveView';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ViewAbout from 'views/viewAbout';
-import ViewHobbies from 'views/viewHobbies';
-import ViewTraining from 'views/viewTraining';
+import ViewChallenges from 'views/viewChallenges';
+import ViewLogin from 'views/viewLogin';
+import {
+  default as ViewAbout,
+  default as ViewRewards,
+} from 'views/viewRewards';
 import ViewHome from '../views/viewHome';
 import ViewNotFound from '../views/viewNotFound';
-import ViewExperience from 'views/viewExperience';
 
 const RouteController = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path={`/${EActiveView.about}`} Component={ViewAbout} />
-        <Route path={`/${EActiveView.experience}`} Component={ViewExperience} />
-        <Route path={`/${EActiveView.hobbies}`} Component={ViewHobbies} />
-        <Route path={`/${EActiveView.trainning}`} Component={ViewTraining} />
-        <Route path="/" Component={ViewHome} />
+        <Route path={`/${EActiveView.challenges}`} Component={ViewChallenges} />
+        <Route path={`/${EActiveView.rewards}`} Component={ViewRewards} />
+        <Route path="/home" Component={ViewHome} />
+        <Route path="/" Component={ViewLogin} />
         <Route path="*" Component={ViewNotFound} />
       </Routes>
     </BrowserRouter>

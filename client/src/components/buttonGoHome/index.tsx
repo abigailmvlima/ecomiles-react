@@ -1,4 +1,3 @@
-import svg from 'assets/svg';
 import { useNavigate } from 'react-router-dom';
 import * as S from './styles';
 
@@ -11,9 +10,6 @@ const ButtonGoHome = () => {
         navigate('/');
       }}
     >
-      <S.Icon>
-        <svg.ChevronRight />
-      </S.Icon>
       <S.Title>Home</S.Title>
     </S.Container>
   );

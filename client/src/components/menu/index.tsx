@@ -18,18 +18,6 @@ const Menu = ({ active = EActiveView.home }: TProps) => {
       label: 'About',
       active: EActiveView.about,
     },
-    {
-      label: 'Training',
-      active: EActiveView.trainning,
-    },
-    {
-      label: 'Experience',
-      active: EActiveView.experience,
-    },
-    {
-      label: 'Hobbies',
-      active: EActiveView.hobbies,
-    },
   ];
 
   const Button = ({
