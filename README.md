@@ -22,3 +22,7 @@
 - "Milas" podem ser trocados por pontos oferecidos por empresas doadoras de produtos.
 
 O projeto "EcoMiles" visa envolver os colaboradores em práticas ESG, incentivando a participação ativa por meio de desafios e oferecendo recompensas que podem ser resgatadas junto a empresas parceiras, criando assim um ciclo de engajamento e benefícios para todos os envolvidos.
+
+<img width="2074" alt="image" src="https://github.com/abigailmvlima/ecomiles-react/assets/6618004/aafd92b0-98bc-45dd-8319-cd01cc47bcc6">
+
+<img width="2085" alt="image" src="https://github.com/abigailmvlima/ecomiles-react/assets/6618004/fbb121e6-0bbb-4f32-befa-37645fb43a4f">
