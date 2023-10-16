@@ -1,4 +1,4 @@
-# echomiles react
+# ecomiles react
 
 **Resumo do Projeto "EcoMiles"**
 
