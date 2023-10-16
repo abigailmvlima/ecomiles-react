@@ -2,7 +2,7 @@
 
 **Resumo do Projeto "EcoMiles"**
 
-**Objetivo:** O projeto "EcoMiles" é uma plataforma de aplicativo (app) voltada para os colaboradores, com o propósito de promover práticas sustentáveis e responsabilidade social em uma empresa, focando em dois principais pontos ESG: Redução de Desperdício e Diversidade e Inclusão.
+**Objetivo:** O projeto "EcoMiles" é uma plataforma voltada para os colaboradores, com o propósito de promover práticas sustentáveis e responsabilidade social em uma empresa, focando em dois principais pontos ESG: Redução de Desperdício e Diversidade e Inclusão.
 
 **Funcionamento:**
 - Colaboradores realizam desafios ESG por meio do aplicativo "EcoMiles" para ganhar "milas".
