@@ -12,7 +12,7 @@
 1. **Desafio de Redução de Desperdício:** "Economize Recursos em Casa" - Colaboradores registram ações diárias de redução de desperdício em suas casas.
 2. **Desafio de Diversidade e Inclusão:** "Conheça seus Colegas" - Colaboradores se conectam com colegas de diferentes origens e compartilham experiências.
 
-**Recursos do App:**
+**Recursos da Plataforma:**
 - Registros diários de ações.
 - Perfis de colegas e ferramenta de mensagens.
 - Dicas e informações sobre práticas ESG.
