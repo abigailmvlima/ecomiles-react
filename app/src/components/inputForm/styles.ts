@@ -1,4 +1,3 @@
-import svg from "@assets/svg";
 import { ITheme } from "@domain/interfaces/ITheme";
 
 import { EInputPosition, EInputSize } from "@domain/enum/EInput";

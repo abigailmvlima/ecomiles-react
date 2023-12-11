@@ -26,6 +26,7 @@ export const Image = styled.div`
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
+  margin-top: 100px;
 `;
 
 export const IconEcoMiles = styled.img`
