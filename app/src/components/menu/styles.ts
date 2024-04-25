@@ -15,6 +15,7 @@ export const Container = styled.View<ITheme>`
   border-color: ${(p) => themes[p.themeSelected].colors.v1};
   border-top-width: 2px;
   height: ${screenHeight * 0.12};
+  width: ${screenWidth};
 `;
 
 export const Content = styled.View`
@@ -31,7 +32,6 @@ export const Col = styled.View`
   justify-content: center;
   align-items: center;
   width: 80px;
-  margin: 0 10px;
 `;
 
 export const ColText = styled.Text`
@@ -62,6 +62,12 @@ export const IconClient = styled(svg.IconClient)`
 `;
 
 export const IconCar = styled(svg.IconCar)`
+  display: flex;
+  width: 70px;
+  height: 70px;
+  margin-right: 5px;
+`;
+export const IconSac = styled(svg.IconSac)`
   display: flex;
   width: 70px;
   height: 70px;

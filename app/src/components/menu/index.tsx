@@ -33,6 +33,12 @@ const Menu = ({ onPress }: { onPress?: () => void }) => {
             <S.ColText>Carrinho</S.ColText>
           </S.Col>
         </TouchableOpacity>
+        <TouchableOpacity>
+          <S.Col>
+            <S.IconSac />
+            <S.ColText>SAC</S.ColText>
+          </S.Col>
+        </TouchableOpacity>
         <TouchableOpacity onPress={route.login}>
           <S.Col>
             <S.IconClose />
