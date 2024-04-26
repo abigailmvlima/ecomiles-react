@@ -3,6 +3,7 @@ export enum ERoute {
   home = "/home",
   menu = "/menu",
   reward = "/reward",
+  chat = "/chat",
 }
 
 const route = ERoute;

@@ -33,7 +33,7 @@ const Menu = ({ onPress }: { onPress?: () => void }) => {
             <S.ColText>Carrinho</S.ColText>
           </S.Col>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={route.chat}>
           <S.Col>
             <S.IconSac />
             <S.ColText>SAC</S.ColText>
