@@ -4,6 +4,8 @@ export enum ERoute {
   menu = "/menu",
   reward = "/reward",
   chat = "/chat",
+  challenge = "/challenge",
+  challengeDetail = "/challengeDetail",
 }
 
 const route = ERoute;

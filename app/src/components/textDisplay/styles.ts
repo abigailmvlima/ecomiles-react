@@ -56,7 +56,7 @@ const TypeTitleObsCSS = (p: IText) => css<IText>`
   font-family: ${(p) => themes.fonts.Archivo_300Light};
   font-size: 16px;
   letter-spacing: 1px;
-  text-align: justify;
+  text-align: left;
   color: ${themes[p.themeSelected].colors.v9};
 `;
 
