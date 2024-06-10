@@ -1,4 +1,7 @@
+import { ContextNavigation } from "@context/contextNavigation";
 import { ETheme } from "@domain/enum/ETheme";
+import { TNavigation } from "@domain/types/TNavigation";
+import { useContext } from "react";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import * as S from "./styles";
 
@@ -14,11 +17,13 @@ const ChallengeCard: React.FC<IChallengeCard> = ({
   title,
   link,
 }) => {
+  const { route } = useContext<TNavigation>(ContextNavigation);
+
   return (
     <S.Container>
       <S.Col>
         <S.Title>{title || "Desafio de Diversidade e Inclusão"}</S.Title>
-        <TouchableOpacity onPress={() => () => {}}>
+        <TouchableOpacity onPress={route.challengeDetail}>
           <S.Link>saiba mais</S.Link>
         </TouchableOpacity>
       </S.Col>

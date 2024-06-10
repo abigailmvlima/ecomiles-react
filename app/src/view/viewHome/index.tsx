@@ -54,12 +54,17 @@ const ViewHome = () => {
         </S.PresentationText>
 
         <S.BoxSelectType>
+          <TouchableOpacity onPress={route.challenge}>
+            <S.BoxSelectTypeItem>
+              <S.BoxSelectTypeItemTitle>Desafios</S.BoxSelectTypeItemTitle>
+              <Image
+                source={ImgChallenge}
+                style={{ width: 140, height: 140 }}
+              />
+            </S.BoxSelectTypeItem>
+          </TouchableOpacity>
           <S.BoxSelectTypeItem>
-            <S.BoxSelectTypeItemTitle>Desafios</S.BoxSelectTypeItemTitle>
-            <Image source={ImgChallenge} style={{ width: 140, height: 140 }} />
-          </S.BoxSelectTypeItem>
-          <S.BoxSelectTypeItem>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={route.reward}>
               <S.BoxSelectTypeItemTitle>Recompensa</S.BoxSelectTypeItemTitle>
               <Image source={ImgReward} style={{ width: 140, height: 140 }} />
             </TouchableOpacity>
