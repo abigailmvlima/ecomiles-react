@@ -8,7 +8,6 @@
 
 - Colaboradores realizam desafios ESG por meio do aplicativo "EcoMiles" para ganhar "milhas".
 - Os "milhas" acumulados podem ser trocados por pontos, que são fornecidos por empresas doadoras de produtos.
-- 
 
 **Exemplos de Desafios:**
 
@@ -20,14 +19,13 @@
 - Registros diários de ações.
 - Perfis de colegas e ferramenta de mensagens.
 - Dicas e informações sobre práticas ESG.
-- 
-
+  
 **Recompensas:**
 
 - Colaboradores ganham "milhas" ao completar desafios.
 - "Milhas" podem ser trocados por pontos oferecidos por empresas doadoras de produtos.
 
-O projeto "EcoMiles" visa envolver os colaboradores em práticas ESG, incentivando a participação ativa por meio de desafios e oferecendo recompensas que podem ser resgatadas junto a empresas parceiras, criando assim um ciclo de engajamento e benefícios para todos os envolvidos.
+O projeto "Ecomiles" visa envolver os colaboradores em práticas ESG, incentivando a participação ativa por meio de desafios e oferecendo recompensas que podem ser resgatadas junto a empresas parceiras, criando assim um ciclo de engajamento e benefícios para todos os envolvidos.
 
 **APP**
 
