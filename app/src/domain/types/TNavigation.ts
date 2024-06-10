@@ -24,6 +24,7 @@ export type TNavigateRoute = {
   challenge: INavigateRouteFunc;
   challengeRegister: INavigateRouteFunc;
   challengeDetail: INavigateRouteFunc;
+  userEdit: INavigateRouteFunc;
 };
 
 export type TNavigation = {

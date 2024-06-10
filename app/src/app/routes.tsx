@@ -10,6 +10,7 @@ import ViewLogin from "@view/viewLogin";
 import ViewMenu from "@view/viewMenu";
 import ViewRegister from "@view/viewRegister";
 import ViewReward from "@view/viewReward";
+import ViewUserEdit from "@view/viewUserEdit";
 
 const Routes = () => {
   return (
@@ -27,8 +28,9 @@ const Routes = () => {
       <Route path={show.route.menu} component={ViewMenu} />
       <Route path={show.route.reward} component={ViewReward} />
       <Route path={show.route.chat} component={ViewChat} />
-      {/* <Route path={show.route.login} component={ViewLogin} /> */}
-      <Route path={show.route.login} component={ViewRegister} />
+      <Route path={show.route.login} component={ViewLogin} />
+      <Route path={show.route.register} component={ViewRegister} />
+      <Route path={show.route.userEdit} component={ViewUserEdit} />
       <Route exact component={ViewLogin} />
     </Switch>
   );

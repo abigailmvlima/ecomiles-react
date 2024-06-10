@@ -30,6 +30,7 @@ export default ({ children }: any) => {
     challengeRegister: (data: any) =>
       goRoute(show.route.challengeRegister, data),
     register: (data: any) => goRoute(show.route.register, data),
+    userEdit: (data: any) => goRoute(show.route.userEdit, data),
   };
 
   const navigation: TNavigation = {

@@ -8,6 +8,7 @@ export enum ERoute {
   challenge = "/challenge",
   challengeDetail = "/challengeDetail",
   challengeRegister = "/challengeRegister",
+  userEdit = "/userEdit",
 }
 
 const route = ERoute;
