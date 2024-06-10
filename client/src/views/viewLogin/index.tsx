@@ -14,8 +14,8 @@ const ViewLogin = () => {
   const navigate = useNavigate();
   const methods = useForm({
     defaultValues: {
-      mail: 'abigail.lima@gmail.com',
-      password: 'Ab@102030',
+      mail: '',
+      password: '',
     },
   });
 

@@ -13,10 +13,10 @@ const ViewRegister = () => {
   const navigate = useNavigate();
   const methods = useForm({
     defaultValues: {
-      name: 'Abigail Lima',
-      mail: 'abigail.lima@gmail.com',
-      password: 'Ab@102030',
-      passwordConf: 'Ab@102030',
+      name: '',
+      mail: '',
+      password: '',
+      passwordConf: '',
     },
   });
 
