@@ -18,13 +18,6 @@ export const Header = styled.div`
   padding: 0 20px;
 `;
 
-export const BackButton = styled.button`
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-`;
-
 export const Logo = styled.img`
   width: 100px;
 `;
@@ -61,50 +54,59 @@ export const Title = styled.h1`
   letter-spacing: 2px;
 `;
 
-export const ChallengeList = styled.div`
+export const CartList = styled.div`
   width: 100%;
+  display: flex;
   flex-direction: column;
 `;
 
-export const ChallengeItem = styled.div`
+export const CartItem = styled.div`
   display: flex;
   justify-content: space-between;
-  background-color: #e0e0e0;
+  align-items: center;
+  background-color: #f8f8f8;
   padding: 10px;
-  margin: 5px 0;
+  margin: 10px 0;
   border-radius: 5px;
 `;
 
-export const ChallengeDetails = styled.div`
+export const ItemImage = styled.img`
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+`;
+
+export const ItemDetails = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin-left: 10px;
 `;
 
-export const ChallengeTitle = styled.div`
-  font-size: 18px;
-  margin-bottom: 1px;
-  letter-spacing: 1px;
+export const ItemTitle = styled.div`
+  font-size: 16px;
+  margin-bottom: 5px;
 `;
 
-export const ChallengeLink = styled.a`
-  color: #0066cc;
-  text-decoration: none;
-  font-size: 14px;
-`;
-
-export const ChallengeActions = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`;
-
-export const ChallengeEnd = styled.div`
+export const ItemMiles = styled.div`
   font-size: 14px;
   color: #666;
-  margin-bottom: 10px;
 `;
 
-export const RegisterButton = styled.button`
+export const RemoveButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+`;
+
+export const TotalMiles = styled.div`
+  margin: 20px 0;
+  font-size: 18px;
+`;
+
+export const FinishButton = styled.button`
   background-color: #4caf50;
   color: white;
   border: none;

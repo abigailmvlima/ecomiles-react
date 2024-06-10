@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 
+import { EActiveView } from 'domains/enums/EActiveView';
 import * as S from './styles';
 
 const ViewHome = () => {
@@ -25,7 +26,11 @@ const ViewHome = () => {
         <S.Buttons>
           <S.Button>
             <S.ButtonTitle>Desafios</S.ButtonTitle>
-            <S.ButtonImage>
+            <S.ButtonImage
+              onClick={async () => {
+                navigate(`/${EActiveView.challenges}`);
+              }}
+            >
               <S.ButtonImg
                 src={require('../../assets/png/imageRewards.png')}
                 alt={''}
@@ -34,7 +39,11 @@ const ViewHome = () => {
           </S.Button>
           <S.Button>
             <S.ButtonTitle>Recompensa</S.ButtonTitle>
-            <S.ButtonImage>
+            <S.ButtonImage
+              onClick={async () => {
+                navigate(`/${EActiveView.rewards}`);
+              }}
+            >
               <S.ButtonImg
                 src={require('../../assets/png/imageChallenges.png')}
                 alt={''}

@@ -23,7 +23,8 @@
       "assets/*": ["assets/*"],
       "themes/*": ["themes/*"],
       "domains/*": ["domains/*"],
-      "utils/*": ["utils/*"]
+      "utils/*": ["utils/*"],
+      "show/*": ["show/*"]
     }
   },
   "include": ["src"]

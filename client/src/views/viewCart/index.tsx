@@ -3,13 +3,7 @@ import { EActiveView } from 'domains/enums/EActiveView';
 import { useNavigate } from 'react-router-dom';
 import * as S from './styles';
 
-const rewards = [
-  {
-    title:
-      'AMAZON ECHO DOT 3RD GEN ASSISTENTE VIRTUAL ALEXA COLOR CARBÓN 110V/240V',
-    miles: '19.906 milhas',
-    image: require('../../assets/png/echo_dot.png'),
-  },
+const cartItems = [
   {
     title: 'Kindle 11ª Geração Amazon 6” 16GB 300 ppi Wi-Fi',
     miles: '29.507 milhas',
@@ -27,7 +21,7 @@ const rewards = [
   },
 ];
 
-const ViewRewards = () => {
+const ViewCart = () => {
   const navigate = useNavigate();
 
   return (
@@ -61,23 +55,25 @@ const ViewRewards = () => {
           </S.Logout>
         </S.Profile>
       </S.Header>
-      <S.Title>Recompensas</S.Title>
-      <S.RewardsList>
-        {rewards.map((reward, index) => (
-          <S.RewardItem key={index}>
-            <S.RewardImage src={reward.image} alt={reward.title} />
-            <S.RewardDetails>
-              <S.RewardTitle>{reward.title}</S.RewardTitle>
-              <S.RewardMiles>{reward.miles}</S.RewardMiles>
-            </S.RewardDetails>
-            <S.RewardButton>
-              <svg.Cart />
-            </S.RewardButton>
-          </S.RewardItem>
+      <S.Title>Carrinho</S.Title>
+      <S.CartList>
+        {cartItems.map((item, index) => (
+          <S.CartItem key={index}>
+            <S.ItemImage src={item.image} alt={item.title} />
+            <S.ItemDetails>
+              <S.ItemTitle>{item.title}</S.ItemTitle>
+              <S.ItemMiles>{item.miles}</S.ItemMiles>
+            </S.ItemDetails>
+            <S.RemoveButton>
+              <svg.Trash />
+            </S.RemoveButton>
+          </S.CartItem>
         ))}
-      </S.RewardsList>
+      </S.CartList>
+      <S.TotalMiles>Total Milhas: 58.407</S.TotalMiles>
+      <S.FinishButton>Finalizar</S.FinishButton>
     </S.Container>
   );
 };
 
-export default ViewRewards;
+export default ViewCart;

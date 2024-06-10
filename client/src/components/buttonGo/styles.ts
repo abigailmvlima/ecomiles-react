@@ -19,12 +19,15 @@ export const Container = styled.div<IContainerProps>`
   align-items: center;
   cursor: pointer;
 
+  background-color: ${({ type }) => (type === 3 ? '#64563A' : '#386123')};
+  color: ${({ type }) => (type === 3 ? '#FFF' : '#FFF')};
+
   &:hover {
-    background-color: #386123;
+    background-color: ${({ type }) => (type === 3 ? '#9d8a64' : '#58883f')};
   }
 
   &:active {
-    background-color: #386123;
+    background-color: ${({ type }) => (type === 3 ? '#706142' : '#3c572d')};
   }
 `;
 

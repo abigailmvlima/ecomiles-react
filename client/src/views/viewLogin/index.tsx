@@ -3,17 +3,19 @@ import { useNavigate } from 'react-router-dom';
 import ButtonGo from 'components/buttonGo';
 import InputDefault from 'components/inputDefault';
 import LinkLabel from 'components/linkLabel';
+import { EActiveView } from 'domains/enums/EActiveView';
 import { EInputPosition, EInputType } from 'domains/enums/EInput';
+import { ILogin } from 'domains/interfaces/login';
 import { FormProvider, useForm } from 'react-hook-form';
+import serviceAuth from 'services/serviceAuth';
 import * as S from './styles';
 
 const ViewLogin = () => {
   const navigate = useNavigate();
   const methods = useForm({
     defaultValues: {
-      mail: '',
-      pass: '',
-      rememberLogin: true,
+      mail: 'abigail.lima@gmail.com',
+      password: 'Ab@102030',
     },
   });
 
@@ -34,10 +36,9 @@ const ViewLogin = () => {
             <S.Input>
               <InputDefault
                 position={EInputPosition.center}
-                type={EInputType.cpf}
+                type={EInputType.mail}
                 isLowerCase={true}
-                name={'cpf'}
-                placeholder={'000.000.000-00'}
+                name={'mail'}
               />
             </S.Input>
             <S.Input>
@@ -46,7 +47,6 @@ const ViewLogin = () => {
                 type={EInputType.password}
                 isLowerCase={true}
                 name={'password'}
-                placeholder={'************'}
               />
             </S.Input>
             <S.Forgot>
@@ -54,13 +54,24 @@ const ViewLogin = () => {
             </S.Forgot>
             <S.Buttons>
               <S.Button>
-                <ButtonGo label={'Entrar'} onClick={() => navigate('/home')} />
+                <ButtonGo
+                  label={'Entrar'}
+                  onClick={async () => {
+                    const data: ILogin = await methods.getValues();
+                    await serviceAuth.onLogin(data, navigate);
+                  }}
+                />
               </S.Button>
             </S.Buttons>
             <S.Registers>
               <S.Or>ou</S.Or>
               <S.LinkLabel>
-                <LinkLabel label={'Cadastre-se'} />
+                <LinkLabel
+                  label={'Cadastre-se'}
+                  onClick={async () => {
+                    navigate(`/${EActiveView.register}`);
+                  }}
+                />
               </S.LinkLabel>
             </S.Registers>
           </S.Form>

@@ -52,7 +52,7 @@ export const Input = styled.input<IInput>`
   background-color: transparent;
   margin: 5px 0;
   outline: none;
-  border-bottom: 3px solid #617459;
+  border-bottom: 1px solid #617459;
 
   display: flex;
   flex-grow: 1;
@@ -64,10 +64,10 @@ export const Input = styled.input<IInput>`
     p.position === EInputPosition.left
       ? inputPositionLeftCSS
       : p.position === EInputPosition.center
-      ? inputPositionCenterCSS
-      : p.position === EInputPosition.right
-      ? inputPositionRightCSS
-      : inputPositionLeftCSS};
+        ? inputPositionCenterCSS
+        : p.position === EInputPosition.right
+          ? inputPositionRightCSS
+          : inputPositionLeftCSS};
 
   &::placeholder {
     color: #a5a9a2;

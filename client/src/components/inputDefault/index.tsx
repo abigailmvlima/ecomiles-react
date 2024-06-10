@@ -21,6 +21,7 @@ interface propState {
   isRequired?: boolean;
   onKeyPress?: (e: any) => void;
   showIcons?: boolean;
+  label?: string | undefined;
 }
 
 enum EMaxLength {
@@ -34,7 +35,8 @@ const InputDefault = ({ type = EInputType.text, ...props }: propState) => {
 
   const { control, setError, clearErrors, formState, getValues } =
     useFormContext();
-  const { isRequired, messageErrorText, showIcons, size, position } = props;
+  const { isRequired, messageErrorText, showIcons, size, position, label } =
+    props;
   const { errors } = formState;
 
   const GetErros = () => {
