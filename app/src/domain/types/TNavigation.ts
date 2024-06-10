@@ -20,6 +20,9 @@ export type TNavigateRoute = {
   login: INavigateRouteFunc;
   reward: INavigateRouteFunc;
   chat: INavigateRouteFunc;
+  challenge: INavigateRouteFunc;
+  challengeRegister: INavigateRouteFunc;
+  challengeDetail: INavigateRouteFunc;
 };
 
 export type TNavigation = {
