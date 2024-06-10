@@ -2,8 +2,10 @@ import { Route, Switch } from "react-router-native";
 
 import show from "@show/index";
 import ViewChallengeDetail from "@view/viewChallengeDetail";
+import ViewChallengeRegister from "@view/viewChallengeRegister";
 import ViewChallenges from "@view/viewChallenges";
 import ViewChat from "@view/viewChat";
+import ViewHome from "@view/viewHome";
 import ViewLogin from "@view/viewLogin";
 import ViewMenu from "@view/viewMenu";
 import ViewReward from "@view/viewReward";
@@ -11,9 +13,16 @@ import ViewReward from "@view/viewReward";
 const Routes = () => {
   return (
     <Switch>
-      <Route path={show.route.home} component={ViewChallengeDetail} />
+      <Route
+        path={show.route.challengeRegister}
+        component={ViewChallengeRegister}
+      />
+      <Route
+        path={show.route.challengeDetail}
+        component={ViewChallengeDetail}
+      />
       <Route path={show.route.challenge} component={ViewChallenges} />
-      {/* <Route path={show.route.home} component={ViewHome} /> */}
+      <Route path={show.route.home} component={ViewHome} />
       <Route path={show.route.menu} component={ViewMenu} />
       <Route path={show.route.reward} component={ViewReward} />
       <Route path={show.route.chat} component={ViewChat} />
