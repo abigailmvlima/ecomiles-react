@@ -24,6 +24,13 @@ export default ({ children }: any) => {
     menu: (data: any) => goRoute(show.route.menu, data),
     login: (data: any) => goRoute(show.route.login, data),
     reward: (data: any) => goRoute(show.route.reward, data),
+    chat: (data: any) => goRoute(show.route.chat, data),
+    challenge: (data: any) => goRoute(show.route.challenge, data),
+    challengeDetail: (data: any) => goRoute(show.route.challengeDetail, data),
+    challengeRegister: (data: any) =>
+      goRoute(show.route.challengeRegister, data),
+    register: (data: any) => goRoute(show.route.register, data),
+    userEdit: (data: any) => goRoute(show.route.userEdit, data),
   };
 
   const navigation: TNavigation = {

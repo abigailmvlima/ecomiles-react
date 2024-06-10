@@ -4,8 +4,8 @@ import { FormProvider, useForm } from "react-hook-form";
 import * as S from "./styles";
 
 import svg from "@assets/svg";
+import { ButtonCancel } from "@components/buttonCancel";
 import { ButtonGo } from "@components/buttonGo";
-import { ButtonLink } from "@components/buttonLink";
 import { InputForm } from "@components/inputForm";
 import { ContextNavigation } from "@context/contextNavigation";
 import { ContextTheme } from "@context/contextTheme";
@@ -13,7 +13,7 @@ import { EInputPosition, EInputType } from "@domain/enum/EInput";
 import { IContextTheme } from "@domain/interfaces/IContextTheme";
 import { TNavigation } from "@domain/types/TNavigation";
 
-const ViewLogin = () => {
+const ViewRegister = () => {
   const { route } = useContext<TNavigation>(ContextNavigation);
   const { theme } = useContext<IContextTheme>(ContextTheme);
 
@@ -30,6 +30,16 @@ const ViewLogin = () => {
       <S.Contents>
         <S.Header>
           <svg.LogoLogin />
+          <S.BoxUser>
+            <S.BoxUserUserName themeSelected={theme}>Abigail</S.BoxUserUserName>
+            <S.BoxUserUserPoint themeSelected={theme}>
+              abigail@email.com
+            </S.BoxUserUserPoint>
+            <S.BoxUserUserName themeSelected={theme}>Extrato</S.BoxUserUserName>
+            <S.BoxUserUserPoint themeSelected={theme}>
+              10.250 milhas
+            </S.BoxUserUserPoint>
+          </S.BoxUser>
         </S.Header>
         <S.Form>
           <FormProvider {...methods}>
@@ -39,7 +49,15 @@ const ViewLogin = () => {
               type={EInputType.mail}
               isLowerCase={true}
               name={"mail"}
-              placeholder={"seuemail@email.com"}
+              placeholder={"Email"}
+            />
+            <InputForm
+              position={EInputPosition.center}
+              theme={theme}
+              type={EInputType.mail}
+              isLowerCase={true}
+              name={"mailConfirm"}
+              placeholder={"Confirmar email"}
             />
 
             <InputForm
@@ -48,20 +66,27 @@ const ViewLogin = () => {
               type={EInputType.password}
               isLowerCase={true}
               name={"password"}
-              placeholder={"************"}
+              placeholder={"senha"}
+            />
+            <InputForm
+              position={EInputPosition.center}
+              theme={theme}
+              type={EInputType.password}
+              isLowerCase={true}
+              name={"passwordConfirm"}
+              placeholder={"Confirmar senha"}
             />
           </FormProvider>
         </S.Form>
         <S.Buttons>
           <S.ButtonGo>
-            <ButtonGo theme={theme} label={"Entrar"} onPress={route.home} />
+            <ButtonGo theme={theme} label={"Salvar"} onPress={route.home} />
           </S.ButtonGo>
-          <S.TextOr themeSelected={theme}>ou</S.TextOr>
           <S.ButtomRegister>
-            <ButtonLink
+            <ButtonCancel
               theme={theme}
-              label={"Cadastre-se"}
-              onPress={route.register}
+              label={"Cancelar"}
+              onPress={route.login}
             />
           </S.ButtomRegister>
         </S.Buttons>
@@ -70,4 +95,4 @@ const ViewLogin = () => {
   );
 };
 
-export default ViewLogin;
+export default ViewRegister;

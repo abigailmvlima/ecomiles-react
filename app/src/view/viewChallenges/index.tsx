@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { Image } from "react-native";
 
 import * as S from "./styles";
 
 import svg from "@assets/svg";
+import ChallengeCard from "@components/challengeCard";
 import { Menu } from "@components/menu";
 import { TextDisplay } from "@components/textDisplay";
 import { ContextNavigation } from "@context/contextNavigation";
@@ -12,11 +12,7 @@ import { ETextDisplayType } from "@domain/enum/ETextDisplay";
 import { IContextTheme } from "@domain/interfaces/IContextTheme";
 import { TNavigation } from "@domain/types/TNavigation";
 
-import { TouchableOpacity } from "react-native-gesture-handler";
-import ImgChallenge from "../../assets/images/imgChallenge.png";
-import ImgReward from "../../assets/images/imgReward.png";
-
-const ViewHome = () => {
+const ViewChallenges = () => {
   const { route } = useContext<TNavigation>(ContextNavigation);
   const { theme } = useContext<IContextTheme>(ContextTheme);
 
@@ -28,7 +24,7 @@ const ViewHome = () => {
         </S.HeaderLogo>
         <S.BoxUser>
           <S.BoxUserUserName themeSelected={theme}>
-            Olá, Abigail
+            Olá, Abigails
           </S.BoxUserUserName>
           <S.BoxUserUserPoint themeSelected={theme}>
             10.250 milhas
@@ -40,10 +36,14 @@ const ViewHome = () => {
           <TextDisplay
             theme={theme}
             type={ETextDisplayType.title}
-            label={"Olá, seu caminho para um mundo melhor"}
+            label={"Desafios"}
           />
         </S.PresentationTitle>
-        <S.PresentationText>
+        <ChallengeCard theme={theme} title={""} link={""} />
+        <ChallengeCard theme={theme} title={""} link={""} />
+        <ChallengeCard theme={theme} title={""} link={""} />
+        <ChallengeCard theme={theme} title={""} link={""} />
+        {/* <S.PresentationText>
           <TextDisplay
             theme={theme}
             type={ETextDisplayType.titleObs}
@@ -54,17 +54,12 @@ const ViewHome = () => {
         </S.PresentationText>
 
         <S.BoxSelectType>
-          <TouchableOpacity onPress={route.challenge}>
-            <S.BoxSelectTypeItem>
-              <S.BoxSelectTypeItemTitle>Desafios</S.BoxSelectTypeItemTitle>
-              <Image
-                source={ImgChallenge}
-                style={{ width: 140, height: 140 }}
-              />
-            </S.BoxSelectTypeItem>
-          </TouchableOpacity>
           <S.BoxSelectTypeItem>
-            <TouchableOpacity onPress={route.reward}>
+            <S.BoxSelectTypeItemTitle>Desafios</S.BoxSelectTypeItemTitle>
+            <Image source={ImgChallenge} style={{ width: 140, height: 140 }} />
+          </S.BoxSelectTypeItem>
+          <S.BoxSelectTypeItem>
+            <TouchableOpacity>
               <S.BoxSelectTypeItemTitle>Recompensa</S.BoxSelectTypeItemTitle>
               <Image source={ImgReward} style={{ width: 140, height: 140 }} />
             </TouchableOpacity>
@@ -77,7 +72,7 @@ const ViewHome = () => {
             type={ETextDisplayType.titleObs}
             label={`Ganhe "milas" ao participar de desafios ESG, como redução de desperdício e inclusão, e troque "milas" por pontos de recompensa oferecidos por empresas doadoras de produtos. Faça a diferença de forma sustentável.`}
           />
-        </S.PresentationText>
+        </S.PresentationText> */}
       </S.Content>
       <S.Footer>
         <Menu />
@@ -86,4 +81,4 @@ const ViewHome = () => {
   );
 };
 
-export default ViewHome;
+export default ViewChallenges;

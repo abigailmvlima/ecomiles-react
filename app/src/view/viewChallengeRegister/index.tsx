@@ -4,9 +4,10 @@ import { FormProvider, useForm } from "react-hook-form";
 import * as S from "./styles";
 
 import svg from "@assets/svg";
+import { ButtonCancel } from "@components/buttonCancel";
 import { ButtonGo } from "@components/buttonGo";
-import { ButtonLink } from "@components/buttonLink";
 import { InputForm } from "@components/inputForm";
+import { Menu } from "@components/menu";
 import { ContextNavigation } from "@context/contextNavigation";
 import { ContextTheme } from "@context/contextTheme";
 import { EInputPosition, EInputType } from "@domain/enum/EInput";
@@ -27,10 +28,20 @@ const ViewLogin = () => {
 
   return (
     <S.Container themeSelected={theme}>
+      <S.Header>
+        <S.HeaderLogo>
+          <svg.LogoHorizontal />
+        </S.HeaderLogo>
+        <S.BoxUser>
+          <S.BoxUserUserName themeSelected={theme}>
+            Olá, Abigail
+          </S.BoxUserUserName>
+          <S.BoxUserUserPoint themeSelected={theme}>
+            10.250 milhas
+          </S.BoxUserUserPoint>
+        </S.BoxUser>
+      </S.Header>
       <S.Contents>
-        <S.Header>
-          <svg.LogoLogin />
-        </S.Header>
         <S.Form>
           <FormProvider {...methods}>
             <InputForm
@@ -38,34 +49,36 @@ const ViewLogin = () => {
               theme={theme}
               type={EInputType.mail}
               isLowerCase={true}
-              name={"mail"}
-              placeholder={"seuemail@email.com"}
+              name={"ChallengePersonName"}
+              placeholder={"Nome do colega"}
             />
 
             <InputForm
               position={EInputPosition.center}
               theme={theme}
-              type={EInputType.password}
+              type={EInputType.birthDate}
               isLowerCase={true}
-              name={"password"}
-              placeholder={"************"}
+              name={"interationDate"}
+              placeholder={"Data da Interação"}
             />
           </FormProvider>
         </S.Form>
         <S.Buttons>
           <S.ButtonGo>
-            <ButtonGo theme={theme} label={"Entrar"} onPress={route.home} />
+            <ButtonGo theme={theme} label={"Salvar"} onPress={route.home} />
           </S.ButtonGo>
-          <S.TextOr themeSelected={theme}>ou</S.TextOr>
           <S.ButtomRegister>
-            <ButtonLink
+            <ButtonCancel
               theme={theme}
-              label={"Cadastre-se"}
-              onPress={route.register}
+              label={"Cancelar"}
+              onPress={route.home}
             />
           </S.ButtomRegister>
         </S.Buttons>
       </S.Contents>
+      <S.Footer>
+        <Menu />
+      </S.Footer>
     </S.Container>
   );
 };
