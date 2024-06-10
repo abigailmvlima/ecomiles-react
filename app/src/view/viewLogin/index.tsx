@@ -12,6 +12,8 @@ import { ContextTheme } from "@context/contextTheme";
 import { EInputPosition, EInputType } from "@domain/enum/EInput";
 import { IContextTheme } from "@domain/interfaces/IContextTheme";
 import { TNavigation } from "@domain/types/TNavigation";
+import { ILogin } from "domains/interfaces/login";
+import serviceAuth from "../../service/user.service";
 
 const ViewLogin = () => {
   const { route } = useContext<TNavigation>(ContextNavigation);
@@ -54,7 +56,14 @@ const ViewLogin = () => {
         </S.Form>
         <S.Buttons>
           <S.ButtonGo>
-            <ButtonGo theme={theme} label={"Entrar"} onPress={route.home} />
+            <ButtonGo
+              theme={theme}
+              label={"Entrar"}
+              onPress={() => {
+                const data: ILogin = methods.getValues();
+                serviceAuth.onLogin(data, route.home);
+              }}
+            />
           </S.ButtonGo>
           <S.TextOr themeSelected={theme}>ou</S.TextOr>
           <S.ButtomRegister>
