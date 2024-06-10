@@ -39,10 +39,10 @@ const ViewChallenges = () => {
             label={"Desafios"}
           />
         </S.PresentationTitle>
-        <ChallengeCard />
-        <ChallengeCard />
-        <ChallengeCard />
-        <ChallengeCard />
+        <ChallengeCard theme={theme} title={""} link={""} />
+        <ChallengeCard theme={theme} title={""} link={""} />
+        <ChallengeCard theme={theme} title={""} link={""} />
+        <ChallengeCard theme={theme} title={""} link={""} />
         {/* <S.PresentationText>
           <TextDisplay
             theme={theme}
