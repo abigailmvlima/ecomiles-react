@@ -40,10 +40,9 @@ O projeto "EcoMiles" visa envolver os colaboradores em práticas ESG, incentivan
 **Web**
 ![image](https://github.com/abigailmvlima/fiap-ecomiles-react/assets/81816418/72f94c92-46e6-4814-9583-c1c51291a6f8)
 
-![image](https://github.com/abigailmvlima/fiap-ecomiles-react/assets/81816418/2b7248ab-d13b-43e7-99cd-090a4f51799d)
+![image](https://github.com/abigailmvlima/fiap-ecomiles-react/assets/81816418/3a1a5f97-ca7b-4177-a839-ddd93234db23)
 
-![image](https://github.com/abigailmvlima/fiap-ecomiles-react/assets/81816418/646eb8e1-585c-4898-8fb0-20986523863d)
-
+![image](https://github.com/abigailmvlima/fiap-ecomiles-react/assets/81816418/08d1ae9b-a506-4484-ac16-073829f4cf7f)
 
 
 
